@@ -3,7 +3,7 @@
         "id": 0,
         "titulo": "Oreja de elefante con maceta a eleccion",
         "precio": "150",
-        "url": "/static/media/oreja-de-elefante.ba650244.jpg",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/oreja-de-elefante.jpg",
         "tipo": "linda"
     },
     
@@ -11,7 +11,7 @@
         "id": 1,
         "titulo": "Palo de agua med con maceta a eleccion",
         "precio": "250",
-        "url": "/static/media/palo-de-agua-mediano.98b99105.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palo-de-agua-mediano.png",
         "tipo": "linda"
     },
 
@@ -19,7 +19,7 @@
         "id": 2,
         "titulo": "Palmito con maceta a eleccion",
         "precio": "800",
-        "url": "/static/media/palmito.95486505.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palmito.png",
         "tipo": "linda"
     },
 
@@ -35,7 +35,7 @@
         "id": 4,
         "titulo": "dieffenbachia tropic con maceta a eleccion",
         "precio": "1600",
-        "url": "/static/media/dieffenbachia tropic.0bd10b25.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/dieffenbachia%20tropic.png",
         "tipo": "fea"
     },
 
@@ -43,9 +43,11 @@
         "id": 5,
         "titulo": "Sansevieria con maceta a eleccion",
         "precio": "2500",
-        "url": "/static/media/Sansevieria.4e649e42.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Sansevieria.png",
         "tipo": "fea"
     },
+
+    
 
     {
         "id": 6,
@@ -54,7 +56,7 @@
         "url": "/static/media/desconocida1.90622d64.png",
         "tipo": "fea"
     },
-
+   
     {"id": 7,
         "titulo": "Asplenium nidus con maceta a eleccion",
         "precio": "2500",

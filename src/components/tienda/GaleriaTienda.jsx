@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Producto from './componenteTienda/Producto'
-import palmito from '../../assets/tienda/plantas/desconocida2.png'
+import palmito from '../../assets/tienda/plantas/palmito.png'
 import './galeriaTienda.css'
 
 import data from '../../sample/articulos.json'
