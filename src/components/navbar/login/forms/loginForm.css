@@ -1,0 +1,92 @@
+.contenedor__form{
+    margin-right: 15%;
+    margin-left: 19%;
+}
+
+.accedeATuCuenta{
+    font-family:  'Noto Sans JP' 
+     
+}
+
+.contenedor__form__Uno{
+    width:30%;
+    padding-right: 3%;
+    border-right: solid 1px;
+    
+}
+
+.contenedor__form__Dos{
+    width:50%;
+    
+    
+}
+
+.itemLista{
+    border: none;
+}
+
+.iconoCarrito{
+    width: 8%;
+    display: flex;
+}
+
+.divbotonLogin{
+    text-align: center;
+}
+
+.botonLogin{
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    width: 50%;
+}
+
+.botonLogin:hover{
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    width: 50%;
+    transform: scale(1.1);
+
+}
+
+.textoTodavia{
+    font-family: 'Pattaya' ;
+    font-size: 120%;
+}
+
+.botonRegistro{
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    width: 50%;
+    
+}
+
+.botonRegistro:hover{
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    width: 50%;
+    transform: scale(1.1);
+
+}
+
+.divbotonRegistro{
+    text-align: center;
+}
+
+.alinearIconos{
+    display:flex;
+    align-items:center;
+    margin: 3% 3% 3% 3%
+}
+
+.tiraMaceta{
+    width: 70%;
+    margin-left: 0%;
+}
+
+.verticalLine{
+    border-left: thick solid #ff0000;
+}

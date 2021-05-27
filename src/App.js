@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+
 import './App.css';
+import LoginForm from './components/navbar/login/forms/LoginForm'
+import RegistroForm from './components/navbar/login/forms/RegistroForm'
+
+import Navbar from './components/navbar/Navbar.jsx'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+ 
+} from "react-router-dom";
+import GaleriaTienda from './components/tienda/GaleriaTienda';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+      <Navbar/>
+      
+        <Switch>
+          <Route path="/quienessomos">
+            
+          </Route>
+          <Route path="/tienda">
+            <GaleriaTienda/>
+          </Route>
+          <Route path="/loginform">
+             <LoginForm/>
+          </Route>
+          <Route path="/registroform">
+            <RegistroForm/>
+          </Route>
+    
+        </Switch>
+      </Router>
+      
     </div>
+    
+   
   );
 }
 

@@ -1,0 +1,29 @@
+.categorias_titulo{
+    color: rgb(241, 165, 241);
+    font-size: 110%;
+    letter-spacing: 5px;
+
+}
+
+.categorias_linea{
+    color: rgb(241, 165, 241);
+}
+
+.categorias_botones{
+    margin-left: 3%;
+    font-size: 100%;
+    color: black;
+    background-color:white;
+    border: none;
+    width: 80%;
+    padding: 3px;
+    
+}
+
+.categorias_botones:hover{
+    background-color: rgb(241, 165, 241);
+    border-radius: 3px;
+    padding: 3px;
+    transition: 1s;
+    color:white;
+}

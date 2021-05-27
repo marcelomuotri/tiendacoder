@@ -1,0 +1,22 @@
+.botonLogIn{
+        
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    font-size: 100%;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 15px;
+        
+}
+
+.botonRegistrarse{
+    color: black;
+    background-color:rgb(241, 165, 241);
+    border: none;
+    font-size: 100%;
+    padding: 7px;
+    border-radius: 4px;
+ 
+    
+}

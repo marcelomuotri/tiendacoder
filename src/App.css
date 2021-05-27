@@ -1,5 +1,13 @@
+div {
+  font-family: 'Noto Sans JP';
+  overflow-x: hidden;
+}
+
+
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+
