@@ -1,8 +1,21 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, } from 'react-bootstrap';
 import './producto.css'
 
+
+
+
 const Producto = (props) => {
+
+
+    /* const agregarAlCarrito = () => {
+        var id= props.id
+        console.log(id)
+               
+
+    } */
+
+   
     return (
         
             <Card className="card" >
@@ -19,7 +32,7 @@ const Producto = (props) => {
                     </div>
                     {/* BOTON */}
                     <div className="divBotonComprar mt-4">
-                        <Button className= "botonComprar"variant="primary">AGREGAR AL CARRITO</Button>
+                        <Button onClick={props.tocame} className= "botonComprar"variant="primary">AGREGAR AL CARRITO</Button>
                     </div>
                 </Card.Body>
             </Card>

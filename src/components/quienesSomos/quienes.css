@@ -1,0 +1,16 @@
+.fotoQuienes{
+    width: 65%;
+}
+
+.textoQuienes{
+    animation-name: textoQuienes;
+    animation-duration: 2s;
+    margin-top: 15px;
+    font-size: 120%;
+}
+
+@keyframes textoQuienes {
+    0% {
+      margin-top: 2000px; }
+    100% {
+      margin-top: 15px; } }

@@ -27,7 +27,7 @@
         "id": 3,
         "titulo": "Alocasia amazonica con maceta a eleccion",
         "precio": "1500",
-        "url": "/static/media/planta4.0a6477c2.jpg",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Alocasia%20amazonica.jpg",
         "tipo": "fea"
     },
 
@@ -53,14 +53,14 @@
         "id": 6,
         "titulo": "Syngonium con maceta a eleccion",
         "precio": "2500",
-        "url": "/static/media/desconocida1.90622d64.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Syngonium.png",
         "tipo": "fea"
     },
    
     {"id": 7,
         "titulo": "Asplenium nidus con maceta a eleccion",
         "precio": "2500",
-        "url": "/static/media/desconocida2.578761ba.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Asplenium nidus.png",
         "tipo": "fea"
     }
     

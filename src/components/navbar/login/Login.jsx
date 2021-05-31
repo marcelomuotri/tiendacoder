@@ -1,6 +1,6 @@
 import React from 'react'
 import './Login.css'
-import carro from '../../../assets/comunes/iconos-redes/carro.png'
+import carro from '../../../assets/login/carro-de-la-compra.png'
 
 import{
     Link
@@ -30,9 +30,9 @@ const Login = () => {
                                     Registrarse
                                 </button>
                             </Link>    
-                            
-                            <img scr={carro} alt="hola"></img>
-                                
+                            <Link class="none" to='/checkout'>
+                            <img className="carrito" src={carro} alt="hola"></img>
+                            </Link>  
                         </div>
                     </div>
 

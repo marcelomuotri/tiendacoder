@@ -10,7 +10,9 @@ import {
   Route
  
 } from "react-router-dom";
-import GaleriaTienda from './components/tienda/GaleriaTienda';
+import GaleriaTienda from './components/tienda/componenteTienda/galeria-tienda/GaleriaTienda';
+import Quienes from './components/quienesSomos/Quienes';
+import CheckOut from './components/tienda/Checkout'
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       
         <Switch>
           <Route path="/quienessomos">
+          <Quienes/>
             
           </Route>
           <Route path="/tienda">
@@ -31,6 +34,9 @@ function App() {
           </Route>
           <Route path="/registroform">
             <RegistroForm/>
+          </Route>
+          <Route path="/checkout">
+            <CheckOut/>
           </Route>
     
         </Switch>
