@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Producto from './producto/Producto'
 import './galeriaTienda.css'
 import data from '../../../../sample/articulos.json'
-import { propTypes } from 'react-bootstrap/esm/Image'
+
 
 
 
@@ -11,7 +11,7 @@ import { propTypes } from 'react-bootstrap/esm/Image'
 const GaleriaTienda = (props) => {
 
     const[userData, setUserData] = useState(data);
-    const[numProducto, setNumProducto] = useState('')
+    const[numProducto, setNumProducto] = useState([])
     
      const verPlantasLindas = () => {
      var filtrarLindas = data
@@ -35,14 +35,20 @@ const GaleriaTienda = (props) => {
         setUserData(data)
     } 
 
-    const compro = (numero) => {
+    const compro = (id, url, titulo, precio) => {
 
-        console.log(numero)
-        const carrito = [numero]
-
-        localStorage.setItem("producto numero" ,carrito)
-
+        setNumProducto([
+            ...numProducto,
+            {id: id, url:url, titulo:titulo, precio:precio
+        }])
+        return( 
+        numProducto
+        )
     }
+   
+
+    
+    localStorage.setItem("producto numero" ,JSON.stringify(numProducto))
     
 
     
@@ -68,7 +74,7 @@ const GaleriaTienda = (props) => {
                 <div className="row col-lg-10">
                     {userData.map((item) => (
                     <div key={item.id}  className='col-lg-3 mt-4'>
-                        <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} tocame={()=> compro (item.id)}   />
+                        <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} tocame={()=> compro (item.id, item.url, item.titulo, item.precio)}   />
                     </div>
                     )
                     )
