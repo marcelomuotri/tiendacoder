@@ -4,7 +4,8 @@
         "titulo": "Oreja de elefante con maceta a eleccion",
         "precio": "150",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/oreja-de-elefante.jpg",
-        "tipo": "linda"
+        "tipo": "linda",
+        "cantidad": ""
     },
     
     {

@@ -14,12 +14,17 @@ import GaleriaTienda from './components/tienda/componenteTienda/galeria-tienda/G
 import Quienes from './components/quienesSomos/Quienes';
 import CheckOut from './components/tienda/Checkout'
 
+import DataProvider from './components/context/DataProvider'
+import Prueba from './components/prueba';
+
 
 function App() {
   return (
     <div>
+    <DataProvider>
       <Router>
       <Navbar/>
+     
       
         <Switch>
           <Route path="/quienessomos">
@@ -41,6 +46,7 @@ function App() {
     
         </Switch>
       </Router>
+    </DataProvider>  
       
     </div>
     

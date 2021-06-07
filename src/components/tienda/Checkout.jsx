@@ -1,59 +1,42 @@
-import React, {useState , useEffect} from 'react'
-
-import data from '../../sample/articulos.json'
+import React, { useEffect, useContext} from 'react'
 
 import Producto from './componenteTienda/galeria-tienda/producto/Producto';
 import './../tienda/Checkout.css'
-
-
+import {DataContext} from '../../components/context/DataProvider'
+import {Button} from 'react-bootstrap'
 
 
 
 const Checkout = () => {
-
-    const[numProducto, setNumProducto] = useState([])
     
+    //data provider
+    const value = useContext(DataContext);
+   
+    const [carrito, setCarrito] = value.carrito
+    const [total, setTotal] = value.total
+    const [numProducto, setNumProducto] = value.total
+    const eliminarCarrito = value.eliminarCarrito
+
     
 
-    useEffect(() => {
 
-              const hello = async () => {
-                try{ 
-                const numero = await  (localStorage.getItem("producto numero"));
-                setNumProducto(JSON.parse(numero))
-                
-                
-            }
-         catch(error) {
-            console.log(error)
-        }
-        }
+    
+    //data provider
+     useEffect( () =>{
+		setCarrito ( JSON.parse(localStorage.getItem('productos')) )
+        
+	},[])
     
         
-            
-
-        hello()
-            
-            
-         } ,[]);
-
         
-         /* 
-        const sumate = async () => {
-                
-        var total = await parseInt(numProducto[0].precio)+parseInt(numProducto[1].precio)+parseInt(numProducto[2].precio)
-        console.log(total)
-        return total 
-
-      } */
-
     
-     
+    
     return (
+        
         <div className="container">
             <div className="row mt-4">
                 <div className="row col-lg-8">
-                    {numProducto.map((item) => (
+                    {carrito.map((item) => (
                             <div key={item.id}  className='col-lg-4 mt-4'>
                                 <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} />
                             </div>
@@ -63,13 +46,14 @@ const Checkout = () => {
                 </div>   
             
                 <div className="col-lg-4 mt-4">
-                    <div class="categorias">
-                        <h5 class="categorias_titulo" >CHECK OUT</h5>
-                        <hr class="categirias_linea"></hr>
+                    <div className="categorias">
+                        <h5 className="categorias_titulo" >CHECK OUT</h5>
+                        <Button onClick={ () => eliminarCarrito()}> ELIMINAR CARRITO </Button>
+                        <hr className="categirias_linea"></hr>
                         
                         {
-                        numProducto.map( (item) => (
-                            <div className="listaCheckOut">
+                        carrito.map( (item) => (
+                            <div key={item.id} className="listaCheckOut">
                                 <div>
                                 <p>{item.titulo}</p>
                                 </div>
@@ -80,21 +64,17 @@ const Checkout = () => {
                         )
                         )
                         }
-                        <hr class="categirias_linea"></hr>
+                        <hr className="categirias_linea"></hr>
 
                         <div className="listaCheckOut">
                                 <div>
                                 <p>TOTAL</p>
                                 </div>
                                 <div >
-                                <p>{   }</p>
+                                <p>{ total }</p>
                                 </div>
                             </div>    
-                        
-
                     </div>
-
-                
                 </div>         
             </div>
         </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import './Login.css'
-import carro from '../../../assets/login/carro-de-la-compra.png'
+
 
 import{
     Link
   } from "react-router-dom";
+import CartWidget from './forms/CartWidget';
 
 
 const Login = () => {
@@ -19,19 +20,20 @@ const Login = () => {
         <div>
                     
                     <div className="collapse navbar-collapse justify-content-center " id="intro">
-                        <div class="navbar-nav d-flex ">
+                        <div className="navbar-nav d-flex ">
                             <Link to='/loginform'>
-                                <button class="botonLogIn">
+                                <button className="botonLogIn">
                                     Log in
                                 </button>
                             </Link>
                             <Link to='/registroform'>
-                                <button class="botonRegistrarse">
+                                <button className="botonRegistrarse">
                                     Registrarse
                                 </button>
                             </Link>    
-                            <Link class="none" to='/checkout'>
-                            <img className="carrito" src={carro} alt="hola"></img>
+                            <Link className="none" to='/checkout'>
+                            <CartWidget/>
+                                
                             </Link>  
                         </div>
                     </div>

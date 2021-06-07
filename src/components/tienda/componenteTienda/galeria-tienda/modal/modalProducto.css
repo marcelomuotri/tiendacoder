@@ -1,0 +1,38 @@
+.contornoModal{
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(241, 165, 241);    
+    border-radius: 2px;
+    width: 25%;
+    display: inline-flex;
+}
+
+
+.imagenModal{
+    width: 50%;
+
+}
+
+.botoneraModal{
+    width: 100%;
+    display: inline-flex;
+  
+    
+}
+
+.numeroModal{
+    font-size: 140%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 0px;
+
+}
+
+.botonModal{
+    height: 80%;
+    width: 20%;
+    background-color: white;
+    border: none;
+    font-size: 160%;
+    
+}

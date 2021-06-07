@@ -1,19 +1,29 @@
-import React from 'react'
 import { Button, Card, } from 'react-bootstrap';
 import './producto.css'
-
-
+import React, {useState, useContext} from 'react'
+import {DataContext} from '../../../../context/DataProvider'
 
 
 const Producto = (props) => {
 
+    /// context
+    const value = useContext(DataContext);
+    
+    ////
 
-    /* const agregarAlCarrito = () => {
-        var id= props.id
-        console.log(id)
-               
+    const [ comprado, setComprado] = useState(true)
 
-    } */
+    
+        
+
+    const cambioEstado = () =>{
+        setComprado (true)
+    }
+
+    const cambioEstado2 = () =>{
+        setComprado (false)
+    }
+
 
    
     return (
@@ -32,7 +42,10 @@ const Producto = (props) => {
                     </div>
                     {/* BOTON */}
                     <div className="divBotonComprar mt-4">
-                        <Button onClick={props.tocame} className= "botonComprar"variant="primary">AGREGAR AL CARRITO</Button>
+                    { comprado ? <Button onClick={props.tocame} className= "botonComprar"variant="primary">AGREGAR AL CARRITO</Button>
+                        :
+                        <Button onClick={props.tocame} className= "botonComprar"variant="primary">REMOVER </Button>
+                    }
                     </div>
                 </Card.Body>
             </Card>
