@@ -12,9 +12,19 @@ export const DataProvider = (props) => {
     const[show, setShow] = useState(false);//modal tarjeta
     const[detalle, setDetalle] = useState({})//guarda detalles del item cuando lo subis al modal
     const[numeroItem, setNumeroItem] = useState(0)//id para la foto
-    const[contador, setContador] = useState(0)//contador que va cambiando
+    const[contador, setContador] = useState(1)//contador que va cambiando
     const[subtotal, setSubtotal] = useState(0)//resultado de la multiplicacion
     const[cantidad, setCantidad] = useState(0)//cantidad de productos que compre 
+    
+    
+
+    //modal nuevo
+    const [showCheckout, setShowCheckOut] = useState(false);
+    
+    const handleMostrarCheckout = () => setShowCheckOut(true);
+
+    const handleOcultarCheckout = () => setShowCheckOut(false);
+
 
 
     
@@ -30,12 +40,11 @@ export const DataProvider = (props) => {
     //
     const compro =  () => {     
         
-        console.log(subtotal)
 
         setShow(false)
         setNumProducto([
             ...numProducto,
-            {detalle,subtotal,cantidad:contador}
+            {detalle,subtotal,cantidad:1}
         ])
         setContador(0)
         return(
@@ -64,7 +73,6 @@ export const DataProvider = (props) => {
     useEffect(  () => {
         
         const sumate =  () => {
-            console.log(numProducto)
             var suma = 0;
               if(numProducto.length === 0) {
                
@@ -132,6 +140,7 @@ export const DataProvider = (props) => {
         contador: [contador, setContador],
         subtotal : [subtotal, setSubtotal],
         cantidad: [cantidad, setCantidad],
+        showCheckout: [showCheckout, setShowCheckOut],
         compro: compro,
         eliminarCarrito: eliminarCarrito,
         handleOpen:  handleOpen,
@@ -139,7 +148,12 @@ export const DataProvider = (props) => {
         handleAumentar: handleAumentar,
         handleDisminuir: handleDisminuir,
         handleAumentarCantidad : handleAumentarCantidad,
-        handleDisminuirCantidad: handleDisminuirCantidad
+        handleDisminuirCantidad: handleDisminuirCantidad,
+
+        //modal ckechout
+        handleOcultarCheckout: handleOcultarCheckout,
+        handleMostrarCheckout: handleMostrarCheckout
+
 
         
 

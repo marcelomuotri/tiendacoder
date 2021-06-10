@@ -1,16 +1,19 @@
 import React from 'react'
 import './Login.css'
 
-
 import{
     Link
   } from "react-router-dom";
 import CartWidget from './forms/CartWidget';
 
 
+
+
+
+
 const Login = () => {
+
     
-   ;
 
 
 
@@ -31,10 +34,10 @@ const Login = () => {
                                     Registrarse
                                 </button>
                             </Link>    
-                            <Link className="none" to='/checkout'>
-                            <CartWidget/>
+                            
+                            <CartWidget />
                                 
-                            </Link>  
+                              
                         </div>
                     </div>
 

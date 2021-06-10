@@ -1,0 +1,21 @@
+
+.modalCheckout{
+    float: right;
+    min-height: 700px;
+    height: auto;
+    margin-top: 0px!important;
+    width: 30%;
+    
+
+}
+
+.modal-content{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.modalCheckout_titulo{
+    font-size: 100%;
+}
+

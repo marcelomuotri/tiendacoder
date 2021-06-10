@@ -6,6 +6,7 @@ import './galeriaTienda.css'
 
 
 import ModalProducto from './modal/ModalProducto'
+import ModalCheckout from './modal-checkout/ModalCheckout'
 
 
 const GaleriaTienda = () => {
@@ -79,6 +80,9 @@ const GaleriaTienda = () => {
                 </div>
                 <div> 
                     <ModalProducto />
+                </div>
+                <div> 
+                    <ModalCheckout />
                 </div>
                 
             </div>

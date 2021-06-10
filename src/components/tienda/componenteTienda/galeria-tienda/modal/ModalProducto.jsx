@@ -21,11 +21,9 @@ const ModalProducto = () => {
 
     useEffect(() => {
         
-        setSubtotal (contador * detalle.precio)
-        console.log(detalle.precio)
+        setSubtotal (1 * detalle.precio)
         
-        
-    }, [contador])
+    }, [detalle.precio])
 
 
     const handleClose = () => setShow(false);
@@ -42,15 +40,7 @@ const ModalProducto = () => {
                         <img className="imagenModal rounded mx-auto d-block" src={data[numeroItem].url} ></img>
                     </div>
                     <div className="botoneraModal justify-content-center">
-                        <div className="contornoModal justify-content-center">
-                            <button className="botonModal" onClick={ () => handleDisminuir()}>
-                                -
-                            </button>
-                            <p className= "numeroModal">{contador}</p>
-                            <button className="botonModal" onClick={ () => handleAumentar()}>
-                                +
-                            </button>
-                        </div>
+                        <p> {data[numeroItem].titulo} </p>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>

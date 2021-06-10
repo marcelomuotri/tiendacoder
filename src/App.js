@@ -40,9 +40,7 @@ function App() {
           <Route path="/registroform">
             <RegistroForm/>
           </Route>
-          <Route path="/checkout">
-            <CheckOut/>
-          </Route>
+          
     
         </Switch>
       </Router>

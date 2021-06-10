@@ -1,0 +1,51 @@
+.cardItemCheckout{
+    display: -webkit-box;
+}
+
+.cardItemCheckout_imagen{
+    width: 130px;
+    height: 150px;
+}
+
+.cardItemCheckout_flex{
+    display: flex;
+}
+
+.cardItemCheckout_cardBody{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.cardItemCheckout_pcp{
+    margin-left: 25px;
+}
+
+.cardItemCheckout_titulo{
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 95%;
+    width: 230px;
+}
+
+.cardItemCheckout_botones{
+    display: flex;
+}
+
+.checkBoton{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+}
+
+.btnEliminar{
+    width: 25px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    margin-left: 35px;
+}
+
+.flex{
+    display: flex;
+}

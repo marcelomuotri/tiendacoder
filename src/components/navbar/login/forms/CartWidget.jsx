@@ -1,12 +1,21 @@
-import carro from '../../../../assets/login/carro-de-la-compra.png'
-import React from 'react'
+
+import React,{useContext} from 'react'
+
+import {DataContext} from '../../../context/DataProvider'
+
+
 
 
 
 const CartWidget = () => {
+
+    const value = useContext(DataContext);  
+
+    const handleMostrarCheckout = value.handleMostrarCheckout
+
     return (
         <div>
-            <img className="carrito" src={carro} alt="hola"></img>
+            <button onClick={()=> handleMostrarCheckout ()}>MI CARRITO</button>
         </div>
     )
 }
