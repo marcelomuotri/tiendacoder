@@ -12,7 +12,7 @@ const GaleriaTienda = () => {
     //context
     const value = useContext(DataContext);
     const handleOpen = value.handleOpen
-    const compro = value.compro
+    
     const data = value.data
 
 
@@ -70,8 +70,7 @@ const GaleriaTienda = () => {
                     {userData.map((item) => (
                     <div key={item.id}  className='col-lg-3 mt-4'>
                         <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} 
-                        
-                        tocame={ () => handleOpen()} />{/* //()=> compro (item.id, item.url, item.titulo, item.precio)//  */}
+                        tocame={ () => handleOpen(item.id, item.url, item.titulo, item.precio)} />{/* //()=> compro (item.id, item.url, item.titulo, item.precio)//  */}
                     </div>
                     )
                     )
@@ -79,7 +78,7 @@ const GaleriaTienda = () => {
                             
                 </div>
                 <div> 
-                    <ModalProducto/>
+                    <ModalProducto />
                 </div>
                 
             </div>

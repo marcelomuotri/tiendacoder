@@ -4,6 +4,7 @@ import Producto from './componenteTienda/galeria-tienda/producto/Producto';
 import './../tienda/Checkout.css'
 import {DataContext} from '../../components/context/DataProvider'
 import {Button} from 'react-bootstrap'
+import ProductoCheckOut from './componenteTienda/checkout/producto-checkout/Producto-checkOut';
 
 
 
@@ -14,31 +15,39 @@ const Checkout = () => {
    
     const [carrito, setCarrito] = value.carrito
     const [total, setTotal] = value.total
-    const [numProducto, setNumProducto] = value.total
+    const[numProducto, setNumProducto] = value.numProducto
+    const[cantidad, setCantidad] = value.cantidad
     const eliminarCarrito = value.eliminarCarrito
-
     
 
 
     
     //data provider
      useEffect( () =>{
-		setCarrito ( JSON.parse(localStorage.getItem('productos')) )
+		setNumProducto ( JSON.parse(localStorage.getItem('productos')) )
         
 	},[])
+
+    const eliminarItem = (id) => {
+        
+        numProducto.forEach((item, index) => {
+            if(item.detalle.id == id){
+                numProducto.splice(index,1)
+            }
+        });
+           setNumProducto([...numProducto])
+    }
     
         
-        
-    
-    
     return (
         
         <div className="container">
             <div className="row mt-4">
                 <div className="row col-lg-8">
-                    {carrito.map((item) => (
-                            <div key={item.id}  className='col-lg-4 mt-4'>
-                                <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} />
+                    {numProducto.map((item) => (
+                            <div key={item.detalle.id}  className='col-lg-4 mt-4'>
+                                <ProductoCheckOut id={item.detalle.id} imagen= {item.detalle.url} titulo={item.detalle.titulo} precio={item.detalle.precio}
+                                subtotal={item.subtotal} cantidad={item.cantidad} eliminarItem={ () =>eliminarItem (item.detalle.id)} />
                             </div>
                             )
                             )
@@ -52,13 +61,13 @@ const Checkout = () => {
                         <hr className="categirias_linea"></hr>
                         
                         {
-                        carrito.map( (item) => (
-                            <div key={item.id} className="listaCheckOut">
+                            numProducto.map( (item) => (
+                            <div key={item.detalle.id} className="listaCheckOut">
                                 <div>
-                                <p>{item.titulo}</p>
+                                <p>{item.detalle.titulo}</p>
                                 </div>
                                 <div >
-                                <p className="precio">{item.precio}</p>
+                                <p className="precio"> $ {item.subtotal}</p>
                                 </div>
                             </div>    
                         )
@@ -71,7 +80,7 @@ const Checkout = () => {
                                 <p>TOTAL</p>
                                 </div>
                                 <div >
-                                <p>{ total }</p>
+                                <p>$ { total }</p>
                                 </div>
                             </div>    
                     </div>
