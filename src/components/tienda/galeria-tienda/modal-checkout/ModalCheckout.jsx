@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react'
 import {Modal, Button} from 'react-bootstrap'
-import {DataContext} from '../../../../context/DataProvider'
+import {DataContext} from '../../../context/DataProvider'
 import './ModalCheckOut.css'
 import ItemCheckout from './prodcutosCheckout/ItemCheckout'
 

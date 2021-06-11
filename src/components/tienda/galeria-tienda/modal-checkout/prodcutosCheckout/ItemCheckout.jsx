@@ -2,7 +2,7 @@
 import { Button, Card, } from 'react-bootstrap';
 import React, {useContext, useState, useEffect} from 'react'
 import "./itemCheckout.css"
-import {DataContext} from '../../../../../context/DataProvider'
+import {DataContext} from '../../../../context/DataProvider'
 
 
 

@@ -10,12 +10,12 @@ import {
   Route
  
 } from "react-router-dom";
-import GaleriaTienda from './components/tienda/componenteTienda/galeria-tienda/GaleriaTienda';
+import ItemListContainer from './components/tienda/ItemListContainer'
 import Quienes from './components/quienesSomos/Quienes';
-import CheckOut from './components/tienda/Checkout'
+
 
 import DataProvider from './components/context/DataProvider'
-import Prueba from './components/prueba';
+
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
             
           </Route>
           <Route path="/tienda">
-            <GaleriaTienda/>
+            <ItemListContainer/>
           </Route>
           <Route path="/loginform">
              <LoginForm/>

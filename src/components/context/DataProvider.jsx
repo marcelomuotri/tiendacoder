@@ -2,6 +2,7 @@ import React, {createContext, useState, useEffect} from 'react'
 import data from '../../sample/articulos.json'
 
 
+
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
@@ -15,6 +16,7 @@ export const DataProvider = (props) => {
     const[contador, setContador] = useState(1)//contador que va cambiando
     const[subtotal, setSubtotal] = useState(0)//resultado de la multiplicacion
     const[cantidad, setCantidad] = useState(0)//cantidad de productos que compre 
+    const[alertRepetido,setAlertRepetido] = useState (false)
     
     
 
@@ -24,8 +26,6 @@ export const DataProvider = (props) => {
     const handleMostrarCheckout = () => setShowCheckOut(true);
 
     const handleOcultarCheckout = () => setShowCheckOut(false);
-
-
 
     
     //abrir modal
@@ -38,19 +38,26 @@ export const DataProvider = (props) => {
     } 
     
     //
-    const compro =  () => {     
-        
-
+    const compro =  (id) => {  
+          var estoy = 0;
+        for ( var i=0; i<numProducto.length; i++){
+        if (numProducto[i].detalle.id === id){
+            setAlertRepetido(true)
+            estoy = 1
+        break     
+        } 
+        }
+        if(estoy == 0){
         setShow(false)
         setNumProducto([
             ...numProducto,
             {detalle,subtotal,cantidad:1}
         ])
-        setContador(0)
+        setContador(1)
         return(
             numProducto
         )
-       
+        }
         
     }
     
@@ -141,6 +148,7 @@ export const DataProvider = (props) => {
         subtotal : [subtotal, setSubtotal],
         cantidad: [cantidad, setCantidad],
         showCheckout: [showCheckout, setShowCheckOut],
+        alertRepetido: [alertRepetido,setAlertRepetido],
         compro: compro,
         eliminarCarrito: eliminarCarrito,
         handleOpen:  handleOpen,

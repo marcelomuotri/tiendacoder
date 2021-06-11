@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
-import {DataContext} from '../../../../context/DataProvider'
+import {DataContext} from '../../../context/DataProvider'
 import {Modal, Button} from 'react-bootstrap'
 import './modalProducto.css'
 
@@ -47,7 +47,7 @@ const ModalProducto = () => {
                         <Button className="botonCancelarModal" variant="secondary" onClick={handleClose}>
                             Cancelar
                         </Button>
-                        <Button className="botonComprarModal" variant="primary" onClick={ () => compro()}>
+                        <Button className="botonComprarModal" variant="primary" onClick={ () => compro(numeroItem)}>
                             Agregar al carrito
                         </Button>
                 </Modal.Footer>

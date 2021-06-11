@@ -1,7 +1,7 @@
 import { Button, Card, } from 'react-bootstrap';
 import './producto.css'
 import React, {useState, useContext} from 'react'
-import {DataContext} from '../../../../context/DataProvider'
+import {DataContext} from '../../../context/DataProvider'
 
 
 const Producto = (props) => {
