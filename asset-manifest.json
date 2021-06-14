@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/tiendacoder/static/css/main.a4d5b3a8.chunk.css",
+    "main.js": "/tiendacoder/static/js/main.8884931f.chunk.js",
+    "main.js.map": "/tiendacoder/static/js/main.8884931f.chunk.js.map",
+    "runtime-main.js": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js",
+    "runtime-main.js.map": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js.map",
+    "static/js/2.76f300ab.chunk.js": "/tiendacoder/static/js/2.76f300ab.chunk.js",
+    "static/js/2.76f300ab.chunk.js.map": "/tiendacoder/static/js/2.76f300ab.chunk.js.map",
+    "index.html": "/tiendacoder/index.html",
+    "static/css/main.a4d5b3a8.chunk.css.map": "/tiendacoder/static/css/main.a4d5b3a8.chunk.css.map",
+    "static/js/2.76f300ab.chunk.js.LICENSE.txt": "/tiendacoder/static/js/2.76f300ab.chunk.js.LICENSE.txt",
+    "static/media/amor.f7bf909b.svg": "/tiendacoder/static/media/amor.f7bf909b.svg",
+    "static/media/carro-de-la-compra.ecc773d6.png": "/tiendacoder/static/media/carro-de-la-compra.ecc773d6.png",
+    "static/media/carroIcono.c4fa7aa1.png": "/tiendacoder/static/media/carroIcono.c4fa7aa1.png",
+    "static/media/fotoQuienes.bc61d44c.jpg": "/tiendacoder/static/media/fotoQuienes.bc61d44c.jpg",
+    "static/media/logotipo.098ede63.jpg": "/tiendacoder/static/media/logotipo.098ede63.jpg",
+    "static/media/palmera.e0d25d28.png": "/tiendacoder/static/media/palmera.e0d25d28.png",
+    "static/media/tiraMacetas.56b1da13.jpg": "/tiendacoder/static/media/tiraMacetas.56b1da13.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f9a1cd1.js",
+    "static/js/2.76f300ab.chunk.js",
+    "static/css/main.a4d5b3a8.chunk.css",
+    "static/js/main.8884931f.chunk.js"
+  ]
+}
