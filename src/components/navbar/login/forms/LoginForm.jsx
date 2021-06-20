@@ -8,6 +8,7 @@ import tiraMaceta from '../../../../assets/login/tiraMacetas.jpg'
 
 
 const LoginForm = () => {
+    {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
     return (
         <div className="container mt-4 row contenedor__form">
             <h4 className="accedeATuCuenta"> ACCEDE A TU CUENTA</h4>    

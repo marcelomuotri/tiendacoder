@@ -26,16 +26,16 @@ const Login = () => {
                         <div className="navbar-nav d-flex ">
                             <Link to='/loginform'>
                                 <button className="botonLogIn">
-                                    Log in
+                                    INICIAR SESION
                                 </button>
                             </Link>
                             <Link to='/registroform'>
                                 <button className="botonRegistrarse">
-                                    Registrarse
+                                    REGISTRARSE
                                 </button>
                             </Link>    
                             
-                            <CartWidget />
+                           
                                 
                               
                         </div>

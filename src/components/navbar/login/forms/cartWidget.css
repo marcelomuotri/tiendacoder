@@ -2,30 +2,29 @@ a{
     text-decoration: none!important;
 }
 
-.icono{
-    width: 17px;
-}
+
 
 .texto{
     text-decoration: none!important;
     color: black!important;
 }
 
-.boton{
-    background-color: rgb(241, 165, 241);
-    padding: 7px 6px 7px 6px;
-    border-radius: 3px;
-    margin-top: 20px;
+
+.icono{
+    width: 3%!important;
 }
 
-.divBoton{
-    margin-top: 7px;
+
+.carroverde2{
+    margin-left: 65%;
+    position: absolute;
+    width: 63%!important;
+    margin-top: -2.1%;
     cursor: pointer;
 }
 
-
-.numerito{
-display: block!important;
+/* .numerito{
+    display: block!important;
     width: 22px;
     height: 22px;
     background: #dcf7e8;
@@ -40,4 +39,4 @@ display: block!important;
     top: 13px;
     position: relative;
     top: -38px;
-}
+} */

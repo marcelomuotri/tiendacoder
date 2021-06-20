@@ -12,15 +12,15 @@ const Navbar = () => {
     return(
         <div >
                 <nav className="navbar navbar-expand-lg navbar-light bg-light margenes-header">
-                    <div className="col-lg-3">
+                    <div className="col-lg-2">
                         <a className="navbar-brand" href='index.html'>
                         <img src={logotipo} alt="" width="80" height="80"/>
                         </a>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-8 ">
                         <Opciones/>
                     </div>
-                    <div className="col-lg-3 ">
+                    <div className="col-lg-2">
                         <Login />
                     </div> 
                 </nav>

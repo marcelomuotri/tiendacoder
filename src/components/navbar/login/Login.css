@@ -1,33 +1,26 @@
 .botonLogIn{
-        
-    color: black;
-    background-color:rgb(241, 165, 241);
+    font-family: 'Open Sans';
+    color: white;
+    background-color:#F7CA00;
     border: none;
-    font-size: 100%;
-    padding: 7px;
+    font-size: 105%;
+    padding: 5px;
     border-radius: 4px;
     margin-right: 15px;
+    width: max-content;
         
 }
 
 .botonRegistrarse{
-    color: black;
-    background-color:rgb(241, 165, 241);
+    color: white;
+    background-color:#F7CA00;
     border: none;
-    font-size: 100%;
-    padding: 7px;
+    font-size: 105%;
+    padding: 5px;
     border-radius: 4px;
     margin-right: 15px;
     
     
 }
 
-.carrito{
-    width: 37%;
-    margin-left: 4%;
-}
 
-
-.none{
-    width: 30%;
-}

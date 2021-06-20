@@ -2,6 +2,7 @@ import { Button, Card, } from 'react-bootstrap';
 import './producto.css'
 import React, {useState, useContext} from 'react'
 import {DataContext} from '../../../context/DataProvider'
+import carroVerde from '../../../../assets/tienda/carroblanco.png'
 
 
 const Producto = (props) => {
@@ -36,17 +37,19 @@ const Producto = (props) => {
                 <Card.Body>
                     {/* TITULO */}
                     <Card.Title className="cardTitulo">{props.titulo}</Card.Title>
-                    {/* PRECIO */}
-                    <div className="cardPrecio mt-2">
-                        <label>$ {props.precio}</label>
-                    </div>
-                    {/* BOTON */}
-                    <div className="divBotonComprar mt-4">
-                    { comprado ? <Button onClick={props.tocame} className= "botonComprar"variant="primary">AGREGAR AL CARRITO</Button>
-                        :
-                        <Button onClick={props.tocame} className= "botonComprar"variant="primary">REMOVER </Button>
-                    }
-                    </div>
+                    <div className="contenedorPrecioComprar mt-4">
+                        {/* PRECIO */}
+                        <div className="cardPrecio ">
+                            <label>${props.precio}</label>
+                        </div>
+                        {/* BOTON */}
+                       
+                        <a onClick={props.tocame} className="botonComprar">
+                            <a className= "texto" > AGREGAR </a>
+                            <img className="icono2" src={carroVerde} alt="auto"></img>
+                        </a>
+                           
+                    </div>    
                 </Card.Body>
             </Card>
         

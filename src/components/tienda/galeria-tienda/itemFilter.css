@@ -1,0 +1,63 @@
+.filterBox{
+    margin-top: 20%;
+    background-color: #D2EAB5;
+    color: white!important;
+    font-family: 'Montserrat';
+    padding-top: 10%;
+    padding-bottom: 180%;
+   margin-left: 20%;
+}
+
+.categorias_titulo{
+    color: white;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.categorias_linea{
+    color: white;
+}
+
+.categorias_tipo{
+    font-size: 137%;
+    color: white;
+    background-color:transparent;
+    border: none;
+    margin-left: 10%;
+}
+
+.categorias_botones{
+    font-size: 137%;
+    color: white;
+    background-color:transparent;
+    border: none;
+    
+    
+}
+
+.categorias_botones:hover{
+    background-color: rgb(241, 165, 241);
+    
+    
+    transition: 1s;
+    color:white;
+}
+
+.filtro_precios{
+    list-style: none;
+    font-size: 135%;
+}
+
+.cbox1{
+    margin-left: 40%
+}
+
+.cbox2{
+    margin-left: 24%
+}
+
+.cbox3{
+    margin-left: 21%
+}

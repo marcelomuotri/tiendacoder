@@ -1,13 +1,26 @@
 .text{
+    font-family: 'Montserrat';
     text-decoration: none!important;
-    font-size: 110%;
-    color: black!important;
-    letter-spacing: 3px;
-    margin-left: 4px;
+    font-size: 24px;
+    color: #517852!important;
+    font-weight: 400;
+    margin-left: 48px;
+    
     
 }
 
 .link{
     text-decoration: none;
    
+}
+
+.active{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #517852!important ;
+
+}
+
+.navbar_opciones{
+    margin-top: 80px!important;
 }

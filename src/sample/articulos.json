@@ -1,8 +1,8 @@
 [
     {
         "id": 0,
-        "titulo": "Oreja de elefante con maceta a eleccion",
-        "precio": "150",
+        "titulo": "Oreja de elefante ",
+        "precio": "1150",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/oreja-de-elefante.jpg",
         "tipo": "linda",
         "cantidad": ""
@@ -10,23 +10,23 @@
     
     {
         "id": 1,
-        "titulo": "Palo de agua med con maceta a eleccion",
-        "precio": "250",
+        "titulo": "Palo de agua mediano",
+        "precio": "1250",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palo-de-agua-mediano.png",
         "tipo": "linda"
     },
 
     {
         "id": 2,
-        "titulo": "Palmito con maceta a eleccion",
-        "precio": "800",
+        "titulo": "Palmito mediano",
+        "precio": "1800",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palmito.png",
         "tipo": "linda"
     },
 
     {
         "id": 3,
-        "titulo": "Alocasia amazonica con maceta a eleccion",
+        "titulo": "Alocasia amazonica ",
         "precio": "1500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Alocasia%20amazonica.jpg",
         "tipo": "fea"
@@ -34,7 +34,7 @@
 
     {
         "id": 4,
-        "titulo": "dieffenbachia tropic con maceta a eleccion",
+        "titulo": "dieffenbachia tropic ",
         "precio": "1600",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/dieffenbachia%20tropic.png",
         "tipo": "fea"
@@ -42,7 +42,7 @@
 
     {
         "id": 5,
-        "titulo": "Sansevieria con maceta a eleccion",
+        "titulo": "Sansevieria ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Sansevieria.png",
         "tipo": "fea"
@@ -52,14 +52,14 @@
 
     {
         "id": 6,
-        "titulo": "Syngonium con maceta a eleccion",
+        "titulo": "Syngonium ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Syngonium.png",
         "tipo": "fea"
     },
    
     {"id": 7,
-        "titulo": "Asplenium nidus con maceta a eleccion",
+        "titulo": "Asplenium nidus ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Asplenium nidus.png",
         "tipo": "fea"

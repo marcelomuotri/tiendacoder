@@ -1,32 +1,7 @@
-.categorias_titulo{
-    color: rgb(241, 165, 241);
-    font-size: 110%;
-    letter-spacing: 5px;
 
-}
 
-.categorias_linea{
-    color: rgb(241, 165, 241);
-}
+  
 
-.categorias_botones{
-    margin-left: 3%;
-    font-size: 100%;
-    color: black;
-    background-color:white;
-    border: none;
-    width: 80%;
-    padding: 3px;
-    
-}
-
-.categorias_botones:hover{
-    background-color: rgb(241, 165, 241);
-    border-radius: 3px;
-    padding: 3px;
-    transition: 1s;
-    color:white;
-}
 
 .btn-primary:focus{
     background-color: rgb(241, 165, 241) ;
@@ -36,3 +11,32 @@
     
 }
 
+.grupotarjetas{
+    margin-top: 8%
+}
+
+.ordenar{
+    background-color: #D2EAB5;
+    position: absolute;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 600;
+    font-size: 120%;
+    border-radius: 15px;
+    margin-left: 55%;
+    display: flex;
+    width: 9%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: -2.5%;
+    cursor: pointer;
+}
+
+.flechita{
+    width: -webkit-fill-available;
+    height: fit-content;
+    margin-top: 13px;
+    margin-left: 5px;
+    
+}

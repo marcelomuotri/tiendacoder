@@ -1,16 +1,20 @@
 import React, {useState, useContext} from 'react'
 import { DataContext } from '../../context/DataProvider'
+import './itemFilter.css'
 
 
 
 const ItemFilter = () => {
 
 
+
     const value = useContext(DataContext);
+    const[userData, setUserData] = value.userData;
+
 
     const data = value.data
 
-    const[userData, setUserData] = useState(data);
+    
 
     const verPlantasLindas = () => {
         var filtrarLindas = data
@@ -37,12 +41,30 @@ const ItemFilter = () => {
 
     return (
         
-        <div className="categorias">
-            <h5 className="categorias_titulo" >CATEGORIAS</h5>
+        <div className="categorias filterBox">
+            <h5 className="categorias_titulo" >Refinar por</h5>
             <hr className="categirias_linea"></hr>
-            <button className="categorias_botones mt-4" onClick={verPlantasTodas} > Todas las plantas</button>
-            <button className="categorias_botones mt-4" onClick={verPlantasLindas} > Plantas interior</button>
-            <button className="categorias_botones mt-4" onClick={verPlantasFeas} > Plantas exterior</button>
+            <p className="categorias_tipo mt-4" >Tipo:</p>
+            <ul>
+                <button className="categorias_botones mt-2 " onClick={verPlantasTodas} > Todas las plantas</button>
+                <button className="categorias_botones mt-2 " onClick={verPlantasLindas} > De interior</button>
+                <button className="categorias_botones mt-2 " onClick={verPlantasFeas} > De exterior</button>
+                <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Cactus</button>
+                <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Suculentas</button>
+            </ul>
+            <p className="categorias_tipo mt-4" >Precio:</p>
+            <ul>
+                <li className="filtro_precios mt-2">
+                    <span for="cbox2 ">0-500</span> <input type="checkbox" className="cbox1" value="second_checkbox"/> 
+                </li>
+                <li className="filtro_precios mt-2">
+                    <span for="cbox2 ">500-1000</span> <input type="checkbox" className="cbox2" value="second_checkbox"/> 
+                </li>
+                <li className="filtro_precios mt-2">
+                    <span for="cbox2 ">1000-1500</span> <input type="checkbox" className="cbox3" value="second_checkbox"/> 
+                </li>
+            </ul>
+
         </div>
     )
 }

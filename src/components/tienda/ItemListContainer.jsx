@@ -2,19 +2,26 @@ import React from 'react'
 import ItemList from './galeria-tienda/ItemList'
 import ItemFilter from './galeria-tienda/ItemFilter'
 
+
 const ItemListContainer = () => {
+
+    {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
 
     
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-2">
-                    <ItemFilter/>
+        <div >
+            
+            <div className="">
+
+                <div className="row">
+                    <div className="col-lg-3">
+                        <ItemFilter/>
+                    </div>
+                    <div className="col-lg-9">
+                        <ItemList/>
+                    </div>
+                
                 </div>
-                <div className="col-lg-10">
-                    <ItemList/>
-                </div>
-               
             </div>
         </div>
     )

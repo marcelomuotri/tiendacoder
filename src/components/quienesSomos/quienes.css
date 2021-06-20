@@ -1,16 +1,48 @@
-.fotoQuienes{
-    width: 65%;
+.cuadradosVerdes{
+  width: 50%;
+  height: 550px;
+  background-color: #D2EAB5;
 }
 
-.textoQuienes{
-    animation-name: textoQuienes;
-    animation-duration: 2s;
-    margin-top: 15px;
-    font-size: 120%;
+.izquierda{
+  float: right;
+  margin-right: 7%;
 }
 
-@keyframes textoQuienes {
-    0% {
-      margin-top: 2000px; }
-    100% {
-      margin-top: 15px; } }
+.derecha{
+  margin-left: 7%;
+}
+
+.cardIzquierda{
+  position: absolute;
+  
+}
+
+.fotoizquierda{
+  width: 40%;
+  margin-left: -4%;
+  margin-top: 2%;
+}
+
+.cardDerecha{
+  position: absolute;
+}
+
+.fotoDerecha{
+  width: 56.5%;
+  margin-left: -5%;
+  margin-top: 2.7%;
+}
+
+.divTextoIzquierda{
+  width: 350px;
+  min-height: 100px;
+  word-wrap: break-word;
+  margin-left: -1.5%;
+  margin-top: 2%;
+}
+
+.ambosTextos{
+  font-family: 'Montserrat';
+  font-size: 110%;
+}

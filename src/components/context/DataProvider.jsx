@@ -17,6 +17,7 @@ export const DataProvider = (props) => {
     const[subtotal, setSubtotal] = useState(0)//resultado de la multiplicacion
     const[cantidad, setCantidad] = useState(0)//cantidad de productos que compre 
     const[alertRepetido,setAlertRepetido] = useState (false)
+    const[userData, setUserData] = useState(data) 
     
     
 
@@ -149,6 +150,7 @@ export const DataProvider = (props) => {
         cantidad: [cantidad, setCantidad],
         showCheckout: [showCheckout, setShowCheckOut],
         alertRepetido: [alertRepetido,setAlertRepetido],
+        userData: [userData, setUserData],
         compro: compro,
         eliminarCarrito: eliminarCarrito,
         handleOpen:  handleOpen,
