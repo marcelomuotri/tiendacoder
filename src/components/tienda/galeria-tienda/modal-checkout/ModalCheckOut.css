@@ -16,6 +16,42 @@
 }
 
 .modalCheckout_titulo{
-    font-size: 100%;
+    font-size: 150%;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    color: #517852;
+    display: flex;
+    
 }
 
+.cerrargrande{
+    margin-left: 280px;
+    width: 4%;
+    height: 4%;
+    margin-top: 2.6%;
+    cursor: pointer;
+}
+
+.modal-footer{
+    display: block;
+}
+
+.PrecioEnvio{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-size: 140%;
+}
+
+.pagar{
+    font-family: 'Open Sans';
+    color: white;
+    background-color: #F7CA00;
+    border: none;
+    font-size: 105%;
+    padding: 5px;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: 27%;
+    
+}

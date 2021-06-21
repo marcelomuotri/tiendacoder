@@ -3,8 +3,9 @@ import { Button, Card, } from 'react-bootstrap';
 import React, {useContext, useState, useEffect} from 'react'
 import "./itemCheckout.css"
 import {DataContext} from '../../../../context/DataProvider'
-
-
+import flechaverdearriba from '../../../../../assets/tienda/modalcarrito/flecharriba.png'
+import flechaverdeabajo from '../../../../../assets/tienda/modalcarrito/flechabajo.png'
+import cerrarverde from '../../../../../assets/tienda/modalcarrito/cerrarchico.png'
 
 const ItemCheckout = (props) => {
 
@@ -29,21 +30,18 @@ const ItemCheckout = (props) => {
                 <div className="flex">
                     {/* TITULO */}
                         <Card.Title className="cardItemCheckout_titulo">{props.titulo}</Card.Title>
-                        <button className="btnEliminar" onClick={props.eliminarItem}> X </button>
+                        <button className="btnEliminar" onClick={props.eliminarItem}> <img className="cerrarchico" src={cerrarverde}></img> </button>
                 </div>
-                <div className="cardItemCheckout_flex">
-                        {/* PRECIO */}
-                        <div className="cardItemCheckout_pcp" >
-                            <label> {props.precio}</label>
-                        </div>
+                <div className="cardItemCheckout_flex justify-content-around">
+                        
                         {/* CONTADOR */}
                         <div className="cardItemCheckout_pcp cardItemCheckout_botones">
-                            <button className="checkBoton" onClick={props.reducir} ><strong>-</strong></button>
-                            <p>{props.cantidad}</p>
-                            <button className="checkBoton" onClick={props.aumentar}><strong>+</strong></button>
+                            <button className="checkBoton" onClick={props.reducir} ><img src={flechaverdeabajo}></img></button>
+                            <p className="cantidad">{props.cantidad}</p>
+                            <button className="checkBoton" onClick={props.aumentar}><img src={flechaverdearriba}></img></button>
                         </div>
                         <div className="cardItemCheckout_pcp" >
-                            <label> {props.subtotal}</label>
+                            <label> ${props.subtotal}</label>
                         </div>
                 </div>
                     

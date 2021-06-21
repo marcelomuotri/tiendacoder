@@ -3,12 +3,13 @@ import {Modal, Button} from 'react-bootstrap'
 import {DataContext} from '../../../context/DataProvider'
 import './ModalCheckOut.css'
 import ItemCheckout from './prodcutosCheckout/ItemCheckout'
+import  cerrargrande  from '../../../../assets/tienda/modalcarrito/cerrargrande.png'
 
  
 const ModalCheckout = () => {
 
+    //context
     const value = useContext(DataContext);
-
 
     const [showCheckout, setShowCheckOut]= value.showCheckout
     const [numProducto, setNumProducto] = value.numProducto
@@ -16,6 +17,9 @@ const ModalCheckout = () => {
 
     const handleAumentar = value.handleAumentar
     const handleOcultarCheckout = value.handleOcultarCheckout
+    //context
+
+    const [cantidadTotal, setCantidadTotal] = useState(0)
 
 
     
@@ -25,13 +29,17 @@ const ModalCheckout = () => {
         
 	},[])
 
-    /* useEffect(() => {
+    useEffect( () =>{
+        var numero = 0  
+        if(numProducto.length >= 1){
+            for( let i=0; i < numProducto.length ; i++){
+            var numero =+ numProducto[i].cantidad + numero
+            setCantidadTotal(numero)
+            }
+        }
         
-        setSubtotal (numProducto.cantidad * detalle.precio)
-        console.log(detalle.precio)
-        
-        
-    }, [contador]) */
+	},[numProducto])
+
 
 
     const increase = (id) =>{
@@ -67,6 +75,8 @@ const ModalCheckout = () => {
         });
            setNumProducto([...numProducto])
     }
+
+    
     
 
    
@@ -77,12 +87,15 @@ const ModalCheckout = () => {
                 <>
 
                 <Modal dialogClassName="modalCheckout"  show={showCheckout} onHide={handleOcultarCheckout}>
-                    <Modal.Header closeButton>
-                    <Modal.Title class="modalCheckout_titulo"> 
-                    
-                    <p><strong>MI CARRITO ({numProducto.length}) </strong> </p>
-                    
-                    </Modal.Title> {/* aca va a ir la cantidad total */}
+                    <Modal.Header >
+
+                        <Modal.Title class="modalCheckout_titulo"> 
+                            
+                                <p>Tu Carrito { cantidadTotal } </p>
+                                <img onClick={handleOcultarCheckout} className="cerrargrande" src={cerrargrande}></img>
+
+                        </Modal.Title> {/* aca va a ir la cantidad total */}
+
                     </Modal.Header>
                     <Modal.Body> {numProducto.map((item) => (
                             <div key={item.detalle.id}  >
@@ -95,10 +108,19 @@ const ModalCheckout = () => {
                     
                     </Modal.Body>
                     <Modal.Footer>
-                    
-                    <Button variant="primary" onClick={handleOcultarCheckout}>
-                        PAGAR ${total}
-                    </Button>
+                        <div className="container">
+                            <div className="PrecioEnvio">
+                                <p>Envio</p>
+                                <p>$0</p>
+                            </div>    
+                            <div className="PrecioEnvio">
+                                <p>Total</p>
+                                <p>${total}</p>
+                            </div>
+                            <Button variant="primary" className="pagar" onClick={handleOcultarCheckout}>
+                            PAGAR
+                        </Button>
+                        </div>
                     </Modal.Footer>
                 </Modal>
                 </>

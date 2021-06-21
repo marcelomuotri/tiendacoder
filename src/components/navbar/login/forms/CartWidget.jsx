@@ -22,7 +22,7 @@ const CartWidget = () => {
             <a onClick={()=> handleMostrarCheckout ()} >
                 <img className="icono" src={carroverde} alt="auto"></img>
             </a>
-            <span className= "numerito">2</span>                            
+            <span className= "numerito"></span>                            
         </div>
         
         

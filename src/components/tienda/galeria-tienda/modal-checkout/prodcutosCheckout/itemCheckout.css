@@ -1,10 +1,15 @@
 .cardItemCheckout{
     display: -webkit-box;
+    margin: 0px;
+    box-shadow: none;
+    border-color: #517852;
+    border-width: 1px;
+    margin-bottom: 5%;
 }
 
 .cardItemCheckout_imagen{
     width: 130px;
-    height: 150px;
+    height: 200px;
 }
 
 .cardItemCheckout_flex{
@@ -14,17 +19,21 @@
 .cardItemCheckout_cardBody{
     padding-left: 0px;
     padding-right: 0px;
+    margin-top: 25px;
 }
 
 .cardItemCheckout_pcp{
-    margin-left: 25px;
+   
+    font-family: 'Montserrat';
+    font-size: 140%;
 }
 
 .cardItemCheckout_titulo{
     margin-bottom: 50px;
     text-align: center;
-    font-size: 95%;
+    font-size: 120%;
     width: 230px;
+    font-family: 'Montserrat';
 }
 
 .cardItemCheckout_botones{
@@ -44,8 +53,20 @@
     background-color: white;
     border: none;
     margin-left: 35px;
+    position: absolute;
+    margin-left: 62%;
+    margin-top: -8.9%;
+}
+
+.cerrarchico{
+    width: 120%;
+    
 }
 
 .flex{
     display: flex;
+}
+
+.cantidad{
+    font-size: 100%;
 }
