@@ -18,8 +18,7 @@ export const DataProvider = (props) => {
     const[cantidad, setCantidad] = useState(0)//cantidad de productos que compre 
     const[alertRepetido,setAlertRepetido] = useState (false)
     const[userData, setUserData] = useState(data) 
-    
-    
+    const[login, setLogin] = useState(true) // para cambiar el login
 
     //modal nuevo
     const [showCheckout, setShowCheckOut] = useState(false);
@@ -130,6 +129,7 @@ export const DataProvider = (props) => {
         
     }
     
+   
 
 
     //cada vez que se renderiza el componente, primero guarda los datos viejos del storage, y los vuelvo a colocar en la variable 
@@ -151,6 +151,7 @@ export const DataProvider = (props) => {
         showCheckout: [showCheckout, setShowCheckOut],
         alertRepetido: [alertRepetido,setAlertRepetido],
         userData: [userData, setUserData],
+        login: [login, setLogin],
         compro: compro,
         eliminarCarrito: eliminarCarrito,
         handleOpen:  handleOpen,
@@ -159,6 +160,7 @@ export const DataProvider = (props) => {
         handleDisminuir: handleDisminuir,
         handleAumentarCantidad : handleAumentarCantidad,
         handleDisminuirCantidad: handleDisminuirCantidad,
+       
 
         //modal ckechout
         handleOcultarCheckout: handleOcultarCheckout,

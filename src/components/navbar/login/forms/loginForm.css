@@ -53,6 +53,7 @@
 .textoTodavia{
     font-family: 'Pattaya' ;
     font-size: 120%;
+    cursor: pointer;
 }
 
 .botonRegistro{

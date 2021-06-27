@@ -5,8 +5,10 @@ import './ModalCheckOut.css'
 import ItemCheckout from './prodcutosCheckout/ItemCheckout'
 import  cerrargrande  from '../../../../assets/tienda/modalcarrito/cerrargrande.png'
 
+import { db } from '../../../../firebase'
+
  
-const ModalCheckout = () => {
+const ModalCheckout = (props) => {
 
     //context
     const value = useContext(DataContext);
@@ -20,6 +22,16 @@ const ModalCheckout = () => {
     //context
 
     const [cantidadTotal, setCantidadTotal] = useState(0)
+
+    React.useEffect( async() =>{// aca estoy cargando el numProducto a la cuenta del usuario, y cada vez que cambie numProducto, esto se actualiza
+            
+        if (props.firebaseUser !== null ){
+            await db.collection(props.firebaseUser.uid).doc(props.firebaseUser.email).set({
+                titulo: numProducto
+
+            })
+    }
+    },[numProducto])
 
 
     
@@ -91,7 +103,7 @@ const ModalCheckout = () => {
 
                         <Modal.Title class="modalCheckout_titulo"> 
                             
-                                <p>Tu Carrito { cantidadTotal } </p>
+                                <p>Tu Carrito ({ cantidadTotal }) </p>
                                 <img onClick={handleOcultarCheckout} className="cerrargrande" src={cerrargrande}></img>
 
                         </Modal.Title> {/* aca va a ir la cantidad total */}

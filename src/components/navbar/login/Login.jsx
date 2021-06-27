@@ -1,51 +1,81 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import './Login.css'
+import { DataContext } from '../../context/DataProvider'
 
-import{
+import {
     Link
-  } from "react-router-dom";
-import CartWidget from './forms/CartWidget';
+} from "react-router-dom"
+import { auth } from '../../../firebase'
+import { withRouter } from 'react-router'
+
+const Login = (props) => {
+
+    const value = useContext(DataContext)
 
 
+    const [login, setLogin] = value.login
+    //voy a registrar mis variables para el login
 
+    const cerrarSesion = () => {
+        auth.signOut()
+            .then(() => {
+                props.history.push('/loginform')
+                
+            })
+    }
 
+    const handleALogin = () => {
+        setLogin(true)
+    }
 
+    const handleAResgistrarse = () => {
+        setLogin(false)
+    }
 
-const Login = () => {
-
-    
-
-
-
-   
     return (
-        
+
         <div>
-                    
-                    <div className="collapse navbar-collapse justify-content-center " id="intro">
-                        <div className="navbar-nav d-flex ">
+
+            <div className="collapse navbar-collapse justify-content-center " id="intro">
+                <div className="navbar-nav d-flex ">
+                    {
+                        props.firebaseUser !== null ? ( //si hay un usuario logueado
+                        <div class="navbar-nav d-flex">
+                            <label> {props.firebaseUser.email}</label>
+                            <button onClick={() => cerrarSesion()} className="botonLogIn">
+                                CERRAR SESION
+                            </button>
+                            
+                        </div>
+                            
+                           ) : ( //si no hay un usuario logueado
+                            <div class="navbar-nav d-flex"> 
                             <Link to='/loginform'>
-                                <button className="botonLogIn">
+                                <button onClick={() => handleALogin()} className="botonLogIn">
                                     INICIAR SESION
                                 </button>
                             </Link>
-                            <Link to='/registroform'>
-                                <button className="botonRegistrarse">
+                            <Link to='/loginform'>
+                                 <button  onClick={() => handleAResgistrarse()} className="botonRegistrarse">
                                     REGISTRARSE
                                 </button>
-                            </Link>    
-                            
-                           
-                                
-                              
-                        </div>
-                    </div>
+                            </Link>
+                            </div>
+                            )
+                    }
+                   
 
                     
+                   
+
+                </div>
+            </div>
+
+
 
         </div>
-        
+
     )
 }
 
-export default Login
+export default  withRouter(Login)

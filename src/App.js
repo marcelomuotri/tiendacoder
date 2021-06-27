@@ -1,7 +1,6 @@
-import {useState} from 'react'
+import {useState,useEffect, useContext} from 'react'
 import './App.css';
 import LoginForm from './components/navbar/login/forms/LoginForm'
-import RegistroForm from './components/navbar/login/forms/RegistroForm'
 
 import Navbar from './components/navbar/Navbar.jsx'
 import {
@@ -13,26 +12,38 @@ import ItemListContainer from './components/tienda/ItemListContainer'
 import Quienes from './components/quienesSomos/Quienes';
 import Inicio from './components/inicio/Inicio'
 import Footer from './components/footer/Footer';
+import {DataProvider} from './components/context/DataProvider'
 
-import DataProvider from './components/context/DataProvider'
+
+import {auth} from './firebase.js'
 
 
 
 function App() {
 
-  const [fondo,setFondo] = useState(true)
 
 
+  const [firebaseUser, setFirebaseUser] = useState(false)
 
-
+  useEffect(() => {
+      auth.onAuthStateChanged(user => {
+          console.log(user)
+          if(user){
+              setFirebaseUser(user)
+          }else{
+              setFirebaseUser(null)
+          }
+      })
+      
+  }, []) // esto es para saber si hay una sesion de usuario iniciada
 
   
-  return (
+  return  firebaseUser !== false ? (
     <div className="background">
 
     <DataProvider>
       <Router>
-      <Navbar/>
+      <Navbar firebaseUser={firebaseUser}/>
      
         <Switch>
 
@@ -43,19 +54,16 @@ function App() {
           </Route>
 
           <Route path="/tienda">
-            <ItemListContainer/>
+            <ItemListContainer firebaseUser={firebaseUser}/>
             <Footer/>
           </Route>
 
           <Route path="/loginform">
-             <LoginForm/>
+             <LoginForm firebaseUser={firebaseUser}/>
              <Footer/>
           </Route>
 
-          <Route path="/registroform">
-            <RegistroForm/>
-            <Footer/>
-          </Route>
+          
 
           <Route path="/">
             <Inicio/>
@@ -68,7 +76,9 @@ function App() {
     </div>
     
    
-  );
+  ) : (
+    <div>Cargando...{firebaseUser}</div>
+  )
 }
 
 export default App;

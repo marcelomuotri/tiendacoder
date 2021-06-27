@@ -3,7 +3,7 @@ import ItemList from './galeria-tienda/ItemList'
 import ItemFilter from './galeria-tienda/ItemFilter'
 
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
 
     {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
 
@@ -18,7 +18,7 @@ const ItemListContainer = () => {
                         <ItemFilter/>
                     </div>
                     <div className="col-lg-9">
-                        <ItemList/>
+                        <ItemList firebaseUser= {props.firebaseUser}/>
                     </div>
                 
                 </div>

@@ -6,7 +6,7 @@ import Opciones from './opciones/Opciones';
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     
     return(
@@ -21,7 +21,7 @@ const Navbar = () => {
                         <Opciones/>
                     </div>
                     <div className="col-lg-2">
-                        <Login />
+                        <Login firebaseUser={props.firebaseUser} />
                     </div> 
                 </nav>
             

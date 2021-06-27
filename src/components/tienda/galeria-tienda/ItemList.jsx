@@ -13,7 +13,7 @@ import carroverde from '../../../assets/tienda/carroverde.png'
 import flechablanca from '../../../assets/tienda/Flecha blanca.png'
 
 
-const GaleriaTienda = () => {
+const GaleriaTienda = (props) => {
     //context
     const value = useContext(DataContext);
     
@@ -26,6 +26,8 @@ const GaleriaTienda = () => {
     //context
 
     const[userData, setUserData] = value.userData;
+
+    
     
  
     return (
@@ -51,7 +53,7 @@ const GaleriaTienda = () => {
                     <ModalProducto />
                 </div>
                 <div> 
-                    <ModalCheckout />
+                    <ModalCheckout firebaseUser= {props.firebaseUser} />
                 </div>
                 <div>
                     <ModalRepetido />
