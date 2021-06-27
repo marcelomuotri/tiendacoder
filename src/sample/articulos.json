@@ -62,12 +62,12 @@
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Asplenium nidus.png",
         "tipo": "fea"
-    }
+    },
 
     {"id": 8,
         "titulo": "Monstera Gari ",
         "precio": "3100",
-        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Asplenium nidus.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/monstera-gari.jpg",
         "tipo": "fea"
     }
 ]
