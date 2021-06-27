@@ -14,12 +14,14 @@ const Login = (props) => {
 
 
     const [login, setLogin] = value.login
+    
     //voy a registrar mis variables para el login
 
     const cerrarSesion = () => {
+        
         auth.signOut()
             .then(() => {
-                props.history.push('/loginform')
+                props.history.push('/loginform') // empujo al loginform
                 
             })
     }

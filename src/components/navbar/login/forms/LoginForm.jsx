@@ -83,7 +83,8 @@ const LoginForm = (props) => {
             setPassword('')
             setError(null)
 
-           /*  props.history.push('/tienda') */
+            props.history.push('/tienda') 
+            
             const data= await db.collection(res.user.uid).get() // aca traigo la informacion de mi usuario
             const arrayData= await (data.docs.map(doc => ({titulo: doc.titulo, ...doc.data() }))) //recupero los datos y los guardo
             setNumProducto(arrayData[0].titulo)
