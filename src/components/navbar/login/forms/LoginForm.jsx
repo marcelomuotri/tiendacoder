@@ -18,11 +18,8 @@ const LoginForm = (props) => {
 
     const [login, setLogin]= value.login
     const [numProducto, setNumProducto]= value.numProducto
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [nombre, setNombre] = useState('')
-    const [apellido, setApellido] = useState('')  
     const [error, setError] = useState(null)
    
 
@@ -35,35 +32,13 @@ const LoginForm = (props) => {
 
     const procesarDatos = e =>{
         e.preventDefault()
-        /* if(!email.trim()){
-            console.log('Datos vacíos email!')
-            setError('Datos vacíos email!')
-            return
-        }
-
-        if(!password.trim()){
-            console.log('datos password incorrectos')
-            setError('Datos vacios password!')
-            return
-        }
-
-        
-        if(password.length < 6){
-            console.log('la contraseña debe ser mayor a 6 caracteres')
-            setError("ingrese mas de 6")
-          
-        } */
-
-    
-
-    }    
        
+    }    
+
         const [user, setUser] = React.useState(null)
 
-        
-
         React.useEffect(() => {
-            if(auth.currentUser){
+            if(auth.currentUser){ // para saber si estas logueado
                 console.log('existe')
                 setUser(auth.currentUser)
                 console.log(user)
@@ -97,6 +72,9 @@ const LoginForm = (props) => {
             if(error.code === "auth/user-not-found"){
                 setError("El usuario no existe")
             }
+            if (error.code === "auth/weak-password"){
+                setError("la contraseña debe ser de al menos 6 caracteres")
+            }
         }
     }, [email, password, props.history])
 
@@ -111,7 +89,7 @@ const LoginForm = (props) => {
                 uid: res.user.uid
             })
 
-            await db.collection(res.user.uid).doc(res.user.email).set({
+            await db.collection(res.user.uid).doc(res.user.email).set({ // agrega los productos a la coleccion, podria hacerlo de una pero prefiero que no 
                 titulo: numProducto
 
             })
@@ -127,6 +105,9 @@ const LoginForm = (props) => {
             }
             if (error.code === "auth/email-already-in-use"){
                 setError("El usuario ya existe")
+            }
+            if (error.code === "auth/weak-password"){
+                setError("la contraseña debe ser de al menos 6 caracteres")
             }
             
         }

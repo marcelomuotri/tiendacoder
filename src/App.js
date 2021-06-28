@@ -1,4 +1,4 @@
-import {useState,useEffect, useContext} from 'react'
+import {useState,useEffect} from 'react'
 import './App.css';
 import LoginForm from './components/navbar/login/forms/LoginForm'
 
@@ -62,8 +62,6 @@ function App() {
              <LoginForm firebaseUser={firebaseUser}/>
              <Footer/>
           </Route>
-
-          
 
           <Route path="/">
             <Inicio/>

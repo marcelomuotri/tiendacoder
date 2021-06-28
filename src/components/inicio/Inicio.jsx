@@ -1,10 +1,10 @@
 import React from 'react'
 import './inicio.css'
-import ImagenFondo from '../../assets/background.jpg'
+
 
 const Inicio = () => {
 
-    {document.body.style = 'backgroundImage: {"imagenFondo"} '}
+    document.body.style = 'backgroundImage: {"imagenFondo"} '
     
     return (
         <div >

@@ -8,7 +8,7 @@ export const DataContext = createContext();
 export const DataProvider = (props) => {
     
     const[numProducto, setNumProducto] = useState([]);//array con los productos que van al storage
-    const[carrito, setCarrito] = useState([])//carrito
+  
     const[total, setTotal] = useState(0)//precio total
     const[show, setShow] = useState(false);//modal tarjeta
     const[detalle, setDetalle] = useState({})//guarda detalles del item cuando lo subis al modal
@@ -47,7 +47,7 @@ export const DataProvider = (props) => {
         break     
         } 
         }
-        if(estoy == 0){
+        if(estoy === 0){
         setShow(false)
         setNumProducto([
             ...numProducto,
@@ -82,7 +82,7 @@ export const DataProvider = (props) => {
         const sumate =  () => {
             var suma = 0;
               if(numProducto.length === 0) {
-               
+               setTotal(0) //si no hay productos que vaya a 0
             } else{
                for (var i=0 ; i<numProducto.length ; i++){  
                  /* console.log("entre al for") */
@@ -100,14 +100,7 @@ export const DataProvider = (props) => {
     }, [numProducto])
 
 //esta funcion es para eliminar el carrito de una
-    const eliminarCarrito = () => {
-       
-        localStorage.setItem("productos" , JSON.stringify([]))
-        
-       setCarrito([])
-       setNumProducto([])    
-       setTotal([])
-    }  
+  
 
     const handleDisminuir = () => {
         if(contador > 0){
@@ -120,27 +113,12 @@ export const DataProvider = (props) => {
         
     }
 
-    
-    const handleAumentarCantidad = (id) => {
-        
-    }
-
-    const handleDisminuirCantidad = () => {
-        
-    }
-    
-   
-
-
     //cada vez que se renderiza el componente, primero guarda los datos viejos del storage, y los vuelvo a colocar en la variable 
     //numProducto.
     
-  
-
 
     const value= {
         numProducto: [numProducto, setNumProducto],
-        carrito: [carrito, setCarrito],
         total: [total, setTotal],
         show: [show, setShow],
         detalle: [detalle, setDetalle],
@@ -153,13 +131,11 @@ export const DataProvider = (props) => {
         userData: [userData, setUserData],
         login: [login, setLogin],
         compro: compro,
-        eliminarCarrito: eliminarCarrito,
         handleOpen:  handleOpen,
         data : data,
         handleAumentar: handleAumentar,
         handleDisminuir: handleDisminuir,
-        handleAumentarCantidad : handleAumentarCantidad,
-        handleDisminuirCantidad: handleDisminuirCantidad,
+       
        
 
         //modal ckechout
@@ -167,8 +143,7 @@ export const DataProvider = (props) => {
         handleMostrarCheckout: handleMostrarCheckout
 
 
-        
-
+    
     }
     return (
         <DataContext.Provider value={value}>

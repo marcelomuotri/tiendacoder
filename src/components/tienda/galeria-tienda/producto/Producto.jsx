@@ -1,32 +1,10 @@
-import { Button, Card, } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './producto.css'
-import React, {useState, useContext} from 'react'
-import {DataContext} from '../../../context/DataProvider'
+import React from 'react'
 import carroVerde from '../../../../assets/tienda/carroblanco.png'
 
-
 const Producto = (props) => {
-
-    /// context
-    const value = useContext(DataContext);
-    
-    ////
-
-    const [ comprado, setComprado] = useState(true)
-
-    
-        
-
-    const cambioEstado = () =>{
-        setComprado (true)
-    }
-
-    const cambioEstado2 = () =>{
-        setComprado (false)
-    }
-
-
-   
+  
     return (
         
             <Card className="card" >

@@ -9,13 +9,11 @@ const ModalProducto = () => {
     const value = useContext(DataContext);
     const [show, setShow] = value.show
     const [numeroItem, setNumeroItem] = value.numeroItem
-    const [contador, setContador] = value.contador
     const [detalle, setDetalle] = value.detalle
     const [subtotal, setSubtotal] = value.subtotal
     const data = value.data
     const compro = value.compro
-    const handleAumentar = value.handleAumentar
-    const handleDisminuir = value.handleDisminuir
+    
     
     //context
 

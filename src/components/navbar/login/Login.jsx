@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import './Login.css'
 import { DataContext } from '../../context/DataProvider'
 
@@ -13,16 +13,16 @@ const Login = (props) => {
     const value = useContext(DataContext)
 
 
-    const [login, setLogin] = value.login
-    
+    const [setLogin] = value.login
+
     //voy a registrar mis variables para el login
 
     const cerrarSesion = () => {
-        
+
         auth.signOut()
             .then(() => {
                 props.history.push('/loginform') // empujo al loginform
-                
+
             })
     }
 
@@ -42,42 +42,34 @@ const Login = (props) => {
                 <div className="navbar-nav d-flex ">
                     {
                         props.firebaseUser !== null ? ( //si hay un usuario logueado
-                        <div class="navbar-nav d-flex">
-                            <label> {props.firebaseUser.email}</label>
-                            <button onClick={() => cerrarSesion()} className="botonLogIn">
-                                CERRAR SESION
-                            </button>
-                            
-                        </div>
-                            
-                           ) : ( //si no hay un usuario logueado
-                            <div class="navbar-nav d-flex"> 
-                            <Link to='/loginform'>
-                                <button onClick={() => handleALogin()} className="botonLogIn">
-                                    INICIAR SESION
+                            <div class="navbar-nav d-flex">
+                                <label> {props.firebaseUser.email}</label>
+                                <button onClick={() => cerrarSesion()} className="botonLogIn">
+                                    CERRAR SESION
                                 </button>
-                            </Link>
-                            <Link to='/loginform'>
-                                 <button  onClick={() => handleAResgistrarse()} className="botonRegistrarse">
-                                    REGISTRARSE
-                                </button>
-                            </Link>
                             </div>
-                            )
+                            
+                        ) : ( //si no hay un usuario logueado
+                            <div class="navbar-nav d-flex">
+                                <Link to='/loginform'>
+                                    <button onClick={() => handleALogin()} className="botonLogIn">
+                                        INICIAR SESION
+                                    </button>
+                                </Link>
+                                <Link to='/loginform'>
+                                    <button onClick={() => handleAResgistrarse()} className="botonRegistrarse">
+                                        REGISTRARSE
+                                    </button>
+                                </Link>
+                            </div>
+                        )
                     }
-                   
-
-                    
-                   
-
                 </div>
             </div>
-
-
 
         </div>
 
     )
 }
 
-export default  withRouter(Login)
+export default withRouter(Login)

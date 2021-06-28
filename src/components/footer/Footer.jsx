@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="centralos">
-                <h3>Copyright <img className="copyright" src={copyright} ></img> 2021</h3>
+                <h3>Copyright <img className="copyright" src={copyright} alt="copyright" ></img> 2021</h3>
             </div>
         </div>
     )

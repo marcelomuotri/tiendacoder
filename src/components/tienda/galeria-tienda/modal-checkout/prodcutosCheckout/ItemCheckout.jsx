@@ -1,21 +1,12 @@
-
-import { Button, Card, } from 'react-bootstrap';
-import React, {useContext, useState, useEffect} from 'react'
+import { Card } from 'react-bootstrap';
+import React from 'react'
 import "./itemCheckout.css"
-import {DataContext} from '../../../../context/DataProvider'
+
 import flechaverdearriba from '../../../../../assets/tienda/modalcarrito/flecharriba.png'
 import flechaverdeabajo from '../../../../../assets/tienda/modalcarrito/flechabajo.png'
 import cerrarverde from '../../../../../assets/tienda/modalcarrito/cerrarchico.png'
 
 const ItemCheckout = (props) => {
-
-    const value = useContext(DataContext);
-    const [contador, setContador] = value.contador
-    const [subtotal, setSubtotal] = value.subtotal
-
-
-    
-
 
     return (
         <div>
@@ -45,7 +36,6 @@ const ItemCheckout = (props) => {
                         </div>
                 </div>
                     
-                   
                 </Card.Body>
             </Card>
         </div>

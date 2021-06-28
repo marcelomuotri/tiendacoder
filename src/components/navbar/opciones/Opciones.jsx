@@ -19,17 +19,17 @@ const Opciones = () => {
                             <div className="collapse navbar-collapse justify-content-center" >
                                 <div className="navbar-nav navbar_opciones ">
                                 
-                                <Link className="link" to='/' >
-                                    <a className="nav-item nav-link text" href="#">Inicio</a>
+                                <Link className="link nav-item nav-link text" to='/' >
+                                   Inicio
                                 </Link>
-                                <Link className="link" to='/tienda'>   
-                                    <a className="nav-item nav-link text active" href="#">Tienda</a>
+                                <Link className="link nav-item nav-link text active" to='/tienda'>   
+                                   Tienda
                                 </Link>
-                                <Link className="link" to='/quienessomos'>
-                                    <a className="nav-item nav-link text" href="#">Quienes somos</a>
+                                <Link className="link nav-item nav-link text" to='/quienessomos'>
+                                  Quienes somos
                                 </Link>
-                                <Link className="link" to='/contacto'>
-                                    <a className="nav-item nav-link text" href="#">Contactanos!</a>
+                                <Link className="link nav-item nav-link text" to='/contacto'>
+                                   Contactanos!
                                 </Link>
                                 </div>
                             </div>
