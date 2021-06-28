@@ -13,7 +13,7 @@ const Login = (props) => {
     const value = useContext(DataContext)
 
 
-    const [setLogin] = value.login
+    const [login, setLogin] = value.login
 
     //voy a registrar mis variables para el login
 
