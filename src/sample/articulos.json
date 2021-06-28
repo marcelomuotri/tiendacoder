@@ -95,7 +95,15 @@
     {"id": 11,
         "titulo": "Million Bells ",
         "precio": "1100",
-        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/little-mercury.png",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/million-bells-t25.jpg",
+        "tipo": "fea"
+    },
+
+    {"id": 11,
+        "titulo": "Thuya-orient ",
+        "precio": "1850",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/thuya-orient.jpg",
         "tipo": "fea"
     }
+
 ]
