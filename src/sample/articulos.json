@@ -85,31 +85,31 @@
         "tipo": "fea"
     },
 
-    {"id": 11,
+    {"id": 12,
         "titulo": "Little Mercury ",
         "precio": "2340",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/little-mercury.png",
         "tipo": "fea"
     },
 
-    {"id": 11,
+    {"id": 13,
         "titulo": "Million Bells ",
         "precio": "1100",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/million-bells-t25.jpg",
         "tipo": "fea"
     },
 
-    {"id": 12,
+    {"id": 14,
         "titulo": "Thuya-orient ",
         "precio": "1850",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/thuya-orient.jpg",
         "tipo": "fea"
     },
 
-    {"id": 13,
+    {"id": 15,
         "titulo": "Thuya-orient ",
         "precio": "2355",
-        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/thuya-orient.jpg",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/hosta.jpg",
         "tipo": "fea"
     }
 
