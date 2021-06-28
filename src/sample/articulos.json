@@ -81,14 +81,21 @@
     {"id": 10,
         "titulo": "Aloe Vera ",
         "precio": "1857",
-        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/cactus2.jpg",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/aloeVera.jpg",
         "tipo": "fea"
     },
 
     {"id": 11,
         "titulo": "Little Mercury ",
         "precio": "2340",
-        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/cactus2.jpg",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/little-mercury.png",
+        "tipo": "fea"
+    },
+
+    {"id": 11,
+        "titulo": "Million Bells ",
+        "precio": "1100",
+        "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/little-mercury.png",
         "tipo": "fea"
     }
 ]
