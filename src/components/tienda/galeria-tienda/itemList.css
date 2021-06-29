@@ -4,8 +4,7 @@
 
 
 .btn-primary:focus{
-    background-color: rgb(241, 165, 241) ;
-    border-color:rgb(241, 165, 241);
+    
     box-shadow: none;
     color: black;
     

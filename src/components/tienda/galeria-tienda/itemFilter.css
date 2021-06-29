@@ -38,11 +38,9 @@
 }
 
 .categorias_botones:hover{
-    background-color: rgb(241, 165, 241);
-    
-    
     transition: 1s;
     color:white;
+    transform: scale(1.1);
 }
 
 .filtro_precios{
