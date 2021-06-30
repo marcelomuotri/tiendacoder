@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { DataContext } from '../../context/DataProvider'
 import './itemFilter.css'
 
@@ -11,28 +11,63 @@ const ItemFilter = () => {
 
     const data = value.data
 
-    const verPlantasLindas = () => {
-        var filtrarLindas = data
-            .filter(function (lindas) {
-                return lindas.tipo === "linda"
+
+    const verPlantasExterior = () => {
+        var filtrarExterior = data
+            .filter(function (exterior) {
+                return exterior.tipo === "exterior"
             })
 
-        setUserData(filtrarLindas)
+        setUserData(filtrarExterior)
     }
 
 
-    const verPlantasFeas = () => {
-        var filtrarFeas = data
-            .filter(function (feas) {
-                return feas.tipo === "fea"
-            })
-        setUserData(filtrarFeas)
+    const verPlantasInterior = () => {
 
+        var filtrarInterior = data
+            .filter(function (interior) {
+                return interior.tipo === "interior"
+            })
+        setUserData(filtrarInterior)
     }
 
     const verPlantasTodas = () => {
         setUserData(data)
     }
+
+   
+
+    const verPlantasMil = () => {
+        
+        var filtrarMil = data
+            .filter(function (mil) {
+                return mil.precio >= 1000 & mil.precio <= 2000
+            })
+        setUserData(filtrarMil) 
+    }
+
+    
+    const verPlantasDosMil = () => {
+        
+        var filtrarMil = data
+            .filter(function (mil) {
+                return mil.precio >= 2000 & mil.precio <= 3000
+            })
+        setUserData(filtrarMil) 
+     
+    }
+
+    const verPlantasTresMil = () => {
+        
+        var filtrarMil = data
+            .filter(function (mil) {
+                return mil.precio >= 3000 & mil.precio <= 4000
+            })
+        setUserData(filtrarMil) 
+        
+    }
+
+  
 
     return (
 
@@ -42,21 +77,25 @@ const ItemFilter = () => {
             <p className="categorias_tipo mt-4" >Tipo:</p>
             <ul>
                 <button className="categorias_botones mt-2 " onClick={verPlantasTodas} > Todas las plantas</button>
-                <button className="categorias_botones mt-2 " onClick={verPlantasLindas} > De interior</button>
-                <button className="categorias_botones mt-2 " onClick={verPlantasFeas} > De exterior</button>
-                <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Cactus</button>
-                <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Suculentas</button>
+                <button className="categorias_botones mt-2 " onClick={verPlantasExterior} > De interior</button>
+                <button className="categorias_botones mt-2 " onClick={verPlantasInterior} > De exterior</button>
+                {/* <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Cactus</button>
+                <button className="categorias_botones mt-2" onClick={verPlantasFeas} > Suculentas</button> */}
             </ul>
             <p className="categorias_tipo mt-4" >Precio:</p>
             <ul>
+               
                 <li className="filtro_precios mt-2">
-                    <span >0-500</span> <input type="checkbox" className="cbox1" value="second_checkbox" />
+                    <span >Todos los precios</span> <input onClick={verPlantasTodas} name="precios" type="radio" className="cbox0" value="second_checkbox"  />
                 </li>
                 <li className="filtro_precios mt-2">
-                    <span >500-1000</span> <input type="checkbox" className="cbox2" value="second_checkbox" />
+                    <span >1000-2000</span> <input onClick={verPlantasMil} name="precios" type="radio" className="cbox1" value="checked"  />
                 </li>
                 <li className="filtro_precios mt-2">
-                    <span  >1000-1500</span> <input type="checkbox" className="cbox3" value="second_checkbox" />
+                    <span >2000-3000</span> <input onClick={verPlantasDosMil}  name="precios" type="radio" className="cbox2" value="second_checkbox" />
+                </li>
+                <li className="filtro_precios mt-2">
+                    <span >3000-4000</span> <input onClick={verPlantasTresMil} name="precios" type="radio" className="cbox3" value="second_checkbox" />
                 </li>
             </ul>
 

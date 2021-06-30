@@ -5,7 +5,7 @@ import ItemFilter from './galeria-tienda/ItemFilter'
 
 const ItemListContainer = (props) => {
 
-    {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
+    document.body.style = 'background: #F3F4EE' /* cambio el color de fondo */
 
     
     return (

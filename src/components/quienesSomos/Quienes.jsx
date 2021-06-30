@@ -8,7 +8,7 @@ import fotoderecha from '../../assets/quienes/fotoderecha.jpg'
 const Quienes = () => {
 
 
-    {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
+    document.body.style = 'background: #F3F4EE'/* cambio el color de fondo */
 
     
     return (
@@ -17,7 +17,7 @@ const Quienes = () => {
                 <div className="col-lg-6 col-sm-12">
                    <div className="cuadradosVerdes izquierda">
                         <div className="cardIzquierda">
-                            <img className="fotoizquierda" src={fotoizquierda}></img>
+                            <img className="fotoizquierda" alt="fotoizquierda" src={fotoizquierda}></img>
                             <div className="divTextoIzquierda">
                                 <p className="ambosTextos">Hola a todos!</p>
                                 <p className="ambosTextos">Somos Victoria y Gonzalo, comenzamos con este proyecto porque nos encanta la naturaleza y la decoracion.</p>
@@ -29,7 +29,7 @@ const Quienes = () => {
                 <div className="col-lg-6 col-sm-12" >
                     <div className="cuadradosVerdes derecha">
                         <div className="cardDerecha">
-                            <img className="fotoDerecha" src={fotoderecha}></img>
+                            <img className="fotoDerecha"  alt="fotoderecha" src={fotoderecha}></img>
                             <div className="divTextoIzquierda">
                                 <p className="ambosTextos">Por esto, nuestro deseo es hacerte llegar los mejores diseños de macetas, trayendote propuestas innovadoras y creativas que te sorprenderan a la hora de decorar tu casa o elegir un regalo.</p>
                                 <p className="ambosTextos">Esperamos poder conocerte muy pronto!</p>

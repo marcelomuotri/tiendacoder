@@ -4,8 +4,8 @@
         "titulo": "Oreja de elefante ",
         "precio": "1150",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/oreja-de-elefante.jpg",
-        "tipo": "linda",
-        "cantidad": ""
+        "tipo": "interior"
+        
     },
     
     {
@@ -13,7 +13,7 @@
         "titulo": "Palo de agua mediano",
         "precio": "1250",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palo-de-agua-mediano.png",
-        "tipo": "linda"
+        "tipo": "exterior"
     },
 
     {
@@ -21,7 +21,7 @@
         "titulo": "Palmito mediano",
         "precio": "1800",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/palmito.png",
-        "tipo": "linda"
+        "tipo": "interior"
     },
 
     {
@@ -29,7 +29,7 @@
         "titulo": "Alocasia amazonica ",
         "precio": "1500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Alocasia%20amazonica.jpg",
-        "tipo": "fea"
+        "tipo": "interior"
     },
 
     {
@@ -37,7 +37,7 @@
         "titulo": "dieffenbachia tropic ",
         "precio": "1600",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/dieffenbachia%20tropic.png",
-        "tipo": "fea"
+        "tipo": "interior"
     },
 
     {
@@ -45,7 +45,7 @@
         "titulo": "Sansevieria ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Sansevieria.png",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
 
@@ -54,63 +54,63 @@
         "titulo": "Syngonium ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Syngonium.png",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
    
     {"id": 7,
         "titulo": "Asplenium nidus ",
         "precio": "2500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/Asplenium nidus.png",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
     {"id": 8,
-        "titulo": "Monstera Gari ",
+        "titulo": "Suculent standar ",
         "precio": "3100",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/cactus1.png",
-        "tipo": "fea"
+        "tipo": "interior"
     },
 
     {"id": 9,
         "titulo": "Monstera Gari ",
         "precio": "3500",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/cactus2.jpg",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
     {"id": 10,
         "titulo": "Aloe Vera ",
         "precio": "1857",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/aloeVera.jpg",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
     {"id": 11,
         "titulo": "Little Mercury ",
         "precio": "2340",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/little-mercury.png",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
     {"id": 12,
         "titulo": "Million Bells ",
         "precio": "1100",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/million-bells-t25.jpg",
-        "tipo": "fea"
+        "tipo": "interior"
     },
 
     {"id": 13,
         "titulo": "Thuya-orient ",
         "precio": "1850",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/thuya-orient.jpg",
-        "tipo": "fea"
+        "tipo": "exterior"
     },
 
     {"id": 14,
         "titulo": "Thuya-orient ",
         "precio": "2355",
         "url": "https://raw.githubusercontent.com/marcelomuotri/tiendacoder/main/src/assets/tienda/plantas/hosta.jpg",
-        "tipo": "fea"
+        "tipo": "interior"
     }
 
 ]

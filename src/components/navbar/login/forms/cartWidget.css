@@ -11,32 +11,22 @@ a{
 
 
 .icono{
-    width: 3%!important;
+    width: 5%!important;
 }
 
 
 .carroverde2{
-    margin-left: 65%;
+    margin-left: 64%;
     position: absolute;
-    width: 63%!important;
-    margin-top: -2.1%;
+    width: 75%!important;
+    margin-top: -4%;
     cursor: pointer;
 }
 
-/* .numerito{
-    display: block!important;
-    width: 22px;
-    height: 22px;
-    background: #dcf7e8;
-    border: 1px solid #01928f;
-    border-radius: 50%;
-    line-height: 22px;
-    color: #005e62;
-    letter-spacing: 0;
-    text-align: center;
+.numerito{
     position: absolute;
-    left: -11px;
-    top: 13px;
-    position: relative;
-    top: -38px;
-} */
+    margin-top: 0.6%;
+    margin-left: -3%;
+    font-weight: 500;
+    font-size: 1.25vw;
+}

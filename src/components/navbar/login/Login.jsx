@@ -43,7 +43,7 @@ const Login = (props) => {
                     {
                         props.firebaseUser !== null ? ( //si hay un usuario logueado
                             <div class="navbar-nav d-flex">
-                                <label> {props.firebaseUser.email}</label>
+                                <label className="emailLogueado"> {props.firebaseUser.email}</label>
                                 <button onClick={() => cerrarSesion()} className="botonLogIn">
                                     CERRAR SESION
                                 </button>

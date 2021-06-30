@@ -24,7 +24,7 @@ const LoginForm = (props) => {
    
 
     //fondo
-    {document.body.style = 'background: #F3F4EE'} {/* cambio el color de fondo */}
+    document.body.style = 'background: #F3F4EE' /* cambio el color de fondo */
 
     const handleLogin = () => {
         setLogin(!login)
@@ -63,6 +63,9 @@ const LoginForm = (props) => {
             const data= await db.collection(res.user.uid).get() // aca traigo la informacion de mi usuario
             const arrayData= await (data.docs.map(doc => ({titulo: doc.titulo, ...doc.data() }))) //recupero los datos y los guardo
             setNumProducto(arrayData[0].titulo)
+
+            props.history.push('/tienda')
+
 
         } catch (error) {
             console.log(error)
@@ -135,23 +138,7 @@ const LoginForm = (props) => {
                         <Form.Control onChange={e => setPassword(e.target.value)} type="password" placeholder="PASSWORD" />
                     </Form.Group>
                     
-                   {/*  { // ACA AGREGO EL INPUT DE NOMBRE
-                         login ?
-                    <Form.Group className="mt-4 " controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Recordarme" />
-                    </Form.Group>
-                    //SINO
-                    : 
-                    <div>
-                        <Form.Group className="mt-4 " controlId="formBasicName">
-                            <Form.Control onChange={e => setNombre(e.target.value)} type="text" placeholder="INGRESA TU NOMBRE" />
-                        </Form.Group>
-                        <Form.Group className="mt-4 " controlId="formBasicSurname">
-                            <Form.Control onChange={e => setApellido(e.target.value)} type="text" placeholder="INGRESA TU APELLIDO" />
-                        </Form.Group>
-                    </div>    
-                        
-                    } */}
+                  
 
                     <div className="divbotonLogin">
                     { login ?

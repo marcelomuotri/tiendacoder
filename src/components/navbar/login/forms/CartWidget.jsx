@@ -14,6 +14,7 @@ const CartWidget = () => {
 
     const value = useContext(DataContext);  
 
+    const [cantidadTotal, setCantidadTotal] = value.cantidadTotal
     const handleMostrarCheckout = value.handleMostrarCheckout
 
     return (
@@ -22,7 +23,7 @@ const CartWidget = () => {
             <a onClick={()=> handleMostrarCheckout ()} >
                 <img className="icono" src={carroverde} alt="auto"></img>
             </a>
-            <span className= "numerito"></span>                            
+            <span className= "numerito">{cantidadTotal}</span>                            
         </div>
         
         

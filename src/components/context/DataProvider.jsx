@@ -19,7 +19,7 @@ export const DataProvider = (props) => {
     const[alertRepetido,setAlertRepetido] = useState (false)
     const[userData, setUserData] = useState(data) 
     const[login, setLogin] = useState(true) // para cambiar el login
-
+    const [cantidadTotal, setCantidadTotal] = useState(0)
     //modal nuevo
     const [showCheckout, setShowCheckOut] = useState(false);
     
@@ -130,6 +130,7 @@ export const DataProvider = (props) => {
         alertRepetido: [alertRepetido,setAlertRepetido],
         userData: [userData, setUserData],
         login: [login, setLogin],
+        cantidadTotal: [cantidadTotal, setCantidadTotal],
         compro: compro,
         handleOpen:  handleOpen,
         data : data,

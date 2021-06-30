@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import { DataContext } from '../../../context/DataProvider'
 import './ModalCheckOut.css'
@@ -16,11 +16,11 @@ const ModalCheckout = (props) => {
     const [showCheckout, setShowCheckOut] = value.showCheckout
     const [numProducto, setNumProducto] = value.numProducto
     const [total, setTotal] = value.total
-
+    const [cantidadTotal, setCantidadTotal] = value.cantidadTotal
     const handleOcultarCheckout = value.handleOcultarCheckout
     //context
 
-    const [cantidadTotal, setCantidadTotal] = useState(0)
+    
 
     React.useEffect(async () => {// aca estoy cargando el numProducto a la cuenta del usuario, y cada vez que cambie numProducto, esto se actualiza
 
@@ -41,7 +41,7 @@ const ModalCheckout = (props) => {
         var numero = 0
         if (numProducto.length >= 1) {
             for (let i = 0; i < numProducto.length; i++) {
-                var numero = + numProducto[i].cantidad + numero
+                 numero = + numProducto[i].cantidad + numero
                 setCantidadTotal(numero)
             } 
             

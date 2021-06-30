@@ -21,15 +21,15 @@ const ItemCheckout = (props) => {
                 <div className="flex">
                     {/* TITULO */}
                         <Card.Title className="cardItemCheckout_titulo">{props.titulo}</Card.Title>
-                        <button className="btnEliminar" onClick={props.eliminarItem}> <img className="cerrarchico" src={cerrarverde}></img> </button>
+                        <button className="btnEliminar" onClick={props.eliminarItem}> <img className="cerrarchico" alt="cerrar" src={cerrarverde}></img> </button>
                 </div>
                 <div className="cardItemCheckout_flex justify-content-around">
                         
                         {/* CONTADOR */}
                         <div className="cardItemCheckout_pcp cardItemCheckout_botones">
-                            <button className="checkBoton" onClick={props.reducir} ><img src={flechaverdeabajo}></img></button>
+                            <button className="checkBoton" onClick={props.reducir} ><img alt="flechaverde" src={flechaverdeabajo}></img></button>
                             <p className="cantidad">{props.cantidad}</p>
-                            <button className="checkBoton" onClick={props.aumentar}><img src={flechaverdearriba}></img></button>
+                            <button className="checkBoton" onClick={props.aumentar}><img alt="flechaverarriba" src={flechaverdearriba}></img></button>
                         </div>
                         <div className="cardItemCheckout_pcp" >
                             <label> ${props.subtotal}</label>

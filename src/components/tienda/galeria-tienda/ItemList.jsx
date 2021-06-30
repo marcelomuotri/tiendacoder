@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {DataContext} from '../../context/DataProvider'
 
 import Producto from './producto/Producto'
@@ -9,7 +9,6 @@ import ModalCheckout from './modal-checkout/ModalCheckout'
 import ModalRepetido from './modal/ModalRepetido'
 import CartWidget from '../../navbar/login/forms/CartWidget'
 
-import flechablanca from '../../../assets/tienda/Flecha blanca.png'
 
 
 const GaleriaTienda = (props) => {
@@ -23,10 +22,7 @@ const GaleriaTienda = (props) => {
     return (
 
         <div className="container">
-                <a className="ordenar">
-                    <a className= "texto" > Ordenar </a>
-                    <img className="flechita" src={flechablanca} alt="auto"></img>
-                </a>
+                
                 <CartWidget className="carroverde"/>
            
             <div className="row grupotarjetas">
