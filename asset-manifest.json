@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/tiendacoder/static/css/main.18601fee.chunk.css",
-    "main.js": "/tiendacoder/static/js/main.33e92ebf.chunk.js",
-    "main.js.map": "/tiendacoder/static/js/main.33e92ebf.chunk.js.map",
+    "main.css": "/tiendacoder/static/css/main.13daac9c.chunk.css",
+    "main.js": "/tiendacoder/static/js/main.6bb419ac.chunk.js",
+    "main.js.map": "/tiendacoder/static/js/main.6bb419ac.chunk.js.map",
     "runtime-main.js": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js",
     "runtime-main.js.map": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js.map",
     "static/js/2.0a81e3aa.chunk.js": "/tiendacoder/static/js/2.0a81e3aa.chunk.js",
     "static/js/2.0a81e3aa.chunk.js.map": "/tiendacoder/static/js/2.0a81e3aa.chunk.js.map",
     "index.html": "/tiendacoder/index.html",
-    "static/css/main.18601fee.chunk.css.map": "/tiendacoder/static/css/main.18601fee.chunk.css.map",
+    "static/css/main.13daac9c.chunk.css.map": "/tiendacoder/static/css/main.13daac9c.chunk.css.map",
     "static/js/2.0a81e3aa.chunk.js.LICENSE.txt": "/tiendacoder/static/js/2.0a81e3aa.chunk.js.LICENSE.txt",
     "static/media/amor.f7bf909b.svg": "/tiendacoder/static/media/amor.f7bf909b.svg",
     "static/media/App.css": "/tiendacoder/static/media/background.72b8c29c.jpg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f9a1cd1.js",
     "static/js/2.0a81e3aa.chunk.js",
-    "static/css/main.18601fee.chunk.css",
-    "static/js/main.33e92ebf.chunk.js"
+    "static/css/main.13daac9c.chunk.css",
+    "static/js/main.6bb419ac.chunk.js"
   ]
 }
