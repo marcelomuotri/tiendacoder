@@ -13,4 +13,13 @@ body{
     
   }  
 
+  @media (max-width: 600px) {
+    body {
+      background-image: none;
+      background-color: #F3F4EE;
+
+    }
+  
+  }
+
 

@@ -35,4 +35,11 @@
     width: max-content;
 }
 
+@media (max-width: 600px) {
+    .flex-direction {
+     flex-direction: row!important;
+    }
+  
+  }
+
 

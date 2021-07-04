@@ -6,4 +6,13 @@
 
 }
 
+@media (max-width: 600px) {
+    .navbar-brand {
+     position: absolute;
+    }
+    .margen{
+        margin-top: 35%;
+    }
+  }
+
 

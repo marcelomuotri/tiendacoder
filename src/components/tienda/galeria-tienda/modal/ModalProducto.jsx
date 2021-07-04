@@ -12,6 +12,7 @@ const ModalProducto = () => {
     const [numeroItem, setNumeroItem] = value.numeroItem
     const [detalle, setDetalle] = value.detalle
     const [subtotal, setSubtotal] = value.subtotal
+    const compro = value.compro
     const data = value.data
  
 
@@ -29,7 +30,7 @@ const ModalProducto = () => {
 
 
     return (
-        <div>
+        <div >
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header className="tituloModal justify-content-center">
                     <Modal.Title >AGREGAR AL CARRITO</Modal.Title>
@@ -49,7 +50,7 @@ const ModalProducto = () => {
                             Cancelar
                         </Button>
                         <div className="botonComprarModal">
-                            <a className="texto" > AGREGAR </a>
+                            <a className="texto" onClick={() => compro(numeroItem)} > AGREGAR </a>
                             <img className="icono3" src={carroBlanco} alt="auto"></img>
                         </div>
 

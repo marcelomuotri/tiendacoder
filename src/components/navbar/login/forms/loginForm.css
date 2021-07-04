@@ -1,6 +1,7 @@
 .contenedor__form{
     margin-right: 15%;
     margin-left: 19%;
+    margin-bottom: 120px;
 }
 
 .accedeATuCuenta{
@@ -92,3 +93,22 @@
 .verticalLine{
     border-left: thick solid #ff0000;
 }
+
+@media (max-width: 600px) {
+    .contenedor__form__Dos{
+        display: none;
+    }
+
+    .contenedor__form__Uno{
+        width: 75%;
+        border: none;
+        
+    }
+    .contenedor__form{
+        margin-left: 0%;
+        padding-right: 0%;
+    }
+    }
+  
+  
+

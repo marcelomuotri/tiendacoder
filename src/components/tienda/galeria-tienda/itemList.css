@@ -39,3 +39,11 @@
     margin-left: 5px;
     
 }
+
+
+@media (max-width: 600px) {
+    .tarjeta {
+      padding-left: 0px;
+ 
+    }
+  }

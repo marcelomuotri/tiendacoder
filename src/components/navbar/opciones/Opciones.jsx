@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState, useEffect} from 'react'
 import {
     Link
   } from "react-router-dom";
@@ -8,7 +8,17 @@ import './opciones.css'
 
 const Opciones = () => {
 
-   
+    const [cerrar,setCerrar] = useState(false);
+
+    useEffect(() => {
+        setCerrar(false)
+        
+    }, [cerrar])
+
+    const handleCerrar = () => {
+        setCerrar(true)
+       
+    }
 
     return (
         <div>
@@ -17,13 +27,15 @@ const Opciones = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                       
-                            <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup" >
-                                <div className="navbar-nav navbar_opciones ">
+                            <div className={cerrar ? "collapse navbar-collapse justify-content-center cssCerrar" 
+                                                   : "collapse navbar-collapse justify-content-center" }
+                                    id="navbarNavAltMarkup" >
+                                <div onClick={()=> handleCerrar()} className="navbar-nav navbar_opciones ">
                                 
-                                <Link className="link nav-item nav-link text" to='/' >
+                                <Link  className="link nav-item nav-link text" to='/' >
                                    Inicio
                                 </Link>
-                                <Link className="link nav-item nav-link text active" to='/tienda'>   
+                                <Link className="link nav-item nav-link text" to='/tienda'>   
                                    Tienda
                                 </Link>
                                 <Link className="link nav-item nav-link text" to='/quienessomos'>

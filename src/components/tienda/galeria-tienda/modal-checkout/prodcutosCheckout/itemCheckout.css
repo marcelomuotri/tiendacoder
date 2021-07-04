@@ -70,3 +70,18 @@
 .cantidad{
     font-size: 100%;
 }
+
+
+@media (max-width: 600px) {
+    .cardItemCheckout_titulo{
+        font-size: 93%;
+        text-align: left;
+    }
+    .cardItemCheckout_flex{
+        display: block;
+    }
+    .btnEliminar{
+        margin-left: 47%;
+    }
+    
+  }

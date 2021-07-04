@@ -12,15 +12,15 @@ const Navbar = (props) => {
     return(
         <div >
                 <nav className="navbar navbar-expand-lg navbar-light bg-light margenes-header">
-                    <div className="col-lg-2">
+                    <div className="col-lg-2 col-sm-2">
                         <a className="navbar-brand" href='index.html'>
                         <img src={logotipo} alt="" width="80" height="80"/>
                         </a>
                     </div>
-                    <div className="col-lg-8 ">
+                    <div className="col-lg-8 col-sm-8 ">
                         <Opciones/>
                     </div>
-                    <div className="col-lg-2">
+                    <div className="col-lg-2 col-sm-6 margen">
                         <Login firebaseUser={props.firebaseUser} />
                     </div> 
                 </nav>

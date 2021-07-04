@@ -69,3 +69,20 @@
 .divBotonComprar{
     width: 100%;
 }
+
+
+@media (max-width: 600px) {
+    .cardImagen {
+     width: 50%;
+    }
+    .cardTitulo{
+        font-size: 90%;
+    }
+    .cardPrecio{
+        font-size: 150%;
+    }
+    .botonComprar{
+        font-size: 70%;
+    }
+  
+  }

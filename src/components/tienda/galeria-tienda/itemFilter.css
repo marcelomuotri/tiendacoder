@@ -6,7 +6,10 @@
     padding-top: 10%;
     padding-bottom: 180%;
    margin-left: 20%;
+   
 }
+
+
 
 .categorias_titulo{
     color: white;
@@ -63,3 +66,11 @@
 .cbox3{
     margin-left: 33.5%
 }
+
+
+@media (max-width: 1000px) {
+    .filterBox {
+      display:none;
+    }
+  
+  }

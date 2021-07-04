@@ -38,11 +38,11 @@ const Login = (props) => {
 
         <div>
 
-            <div className="collapse navbar-collapse justify-content-center " id="intro">
-                <div className="navbar-nav d-flex ">
+            <div className=" justify-content-center " id="intro">
+                <div className="flex-direction  d-flex flex-direction ">
                     {
                         props.firebaseUser !== null ? ( //si hay un usuario logueado
-                            <div class="navbar-nav d-flex">
+                            <div class=" d-flex">
                                 <label className="emailLogueado"> {props.firebaseUser.email}</label>
                                 <button onClick={() => cerrarSesion()} className="botonLogIn">
                                     CERRAR SESION
@@ -50,7 +50,7 @@ const Login = (props) => {
                             </div>
                             
                         ) : ( //si no hay un usuario logueado
-                            <div class="navbar-nav d-flex">
+                            <div class=" d-flex">
                                 <Link to='/loginform'>
                                     <button onClick={() => handleALogin()} className="botonLogIn">
                                         INICIAR SESION

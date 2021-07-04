@@ -19,7 +19,6 @@ const CartWidget = () => {
 
     return (
         <div className="carroverde2">
-            {/* <button onClick={()=> handleMostrarCheckout ()}> <img scr={imagenCarrito}></img>MI CARRITO</button> */}
             <a onClick={()=> handleMostrarCheckout ()} >
                 <img className="icono" src={carroverde} alt="auto"></img>
             </a>

@@ -5,3 +5,10 @@
     margin-top: 5%;
     color: #F7CA00;
 }
+
+@media (max-width: 600px) {
+    .bienvenidos {
+      font-size: 300%;
+    }
+  
+  }

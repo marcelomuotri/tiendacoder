@@ -27,7 +27,7 @@ const GaleriaTienda = (props) => {
            
             <div className="row grupotarjetas">
                     {userData.map((item) => (
-                    <div key={item.id}  className='col-lg-4 mt-4'>
+                    <div key={item.id}  className='col-lg-4 col-sm-12 mt-4 tarjeta'>
                         <Producto imagen= {item.url} titulo={item.titulo} precio={item.precio} 
                         tocame={ () => handleOpen(item.id, item.url, item.titulo, item.precio)} />{/* //()=> compro (item.id, item.url, item.titulo, item.precio)//  */}
                     </div>

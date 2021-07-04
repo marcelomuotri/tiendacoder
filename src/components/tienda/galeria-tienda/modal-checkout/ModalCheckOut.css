@@ -55,3 +55,14 @@
     margin-left: 27%;
     
 }
+
+@media (max-width: 600px) {
+    .modalCheckout {
+       float: none;
+       width: 112%; 
+    }
+    .modalCheckout_titulo{
+        display: block;
+        
+    }
+  }

@@ -124,7 +124,7 @@ const LoginForm = (props) => {
             
             <h4 className="accedeATuCuenta"> ACCEDE A TU CUENTA</h4>    
             
-            <div className="col-lg-6 contenedor__form__Uno">
+            <div className="col-lg-6 col-sm-11 contenedor__form__Uno">
                 {/* FORMULARIO */}
 
                 <Form onSubmit={procesarDatos}>
@@ -173,7 +173,7 @@ const LoginForm = (props) => {
 
 
             {/* SEGUNDA PARTE DEL */}
-            <div className="col-lg-6 contenedor__form__Dos">
+            <div className="col-lg-6  contenedor__form__Dos">
                 
                 <ListGroup>
                     <div className="alinearIconos">
@@ -189,9 +189,6 @@ const LoginForm = (props) => {
                         <p>Benefíciate de descuentos exclusivos para ti</p>
                     </div>
                 </ListGroup>
-                <div>
-                    <img className="tiraMaceta" alt = "4" src={tiraMaceta}></img>
-                </div>
                 
             </div>    
         </div>

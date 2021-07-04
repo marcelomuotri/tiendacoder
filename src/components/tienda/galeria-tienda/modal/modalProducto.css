@@ -20,8 +20,6 @@
 .botoneraModal{
     width: 100%;
     text-align: center;
-  
-    
 }
 
 .numeroModal{
@@ -49,10 +47,8 @@
     font-size: 80%;
 }
 
-.botonComprarModal:hover{
-    background-color:rgb(241, 165, 241);
-    transform: scale(1.05);
-}
+
+
 
 
 .botonCancelarModal{
@@ -95,3 +91,18 @@ font-family: 'Montserrat';
     margin-left: 9%;
     margin-bottom: 2%;
 }
+
+@media (max-width: 600px) {
+    .modal-content {
+     width: 57%!important;
+    }
+    .botonCancelarModal{
+        width: 40%;
+        padding: 0;
+    }
+    .botonComprarModal{
+        width: 50%;
+        padding: 5px 1px 3px 1px;
+        margin-top: 0px;
+    }
+  }

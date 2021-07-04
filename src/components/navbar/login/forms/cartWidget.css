@@ -30,3 +30,17 @@ a{
     font-weight: 500;
     font-size: 1.25vw;
 }
+
+@media (max-width: 600px) {
+    .icono {
+     width: 18%!important;
+     margin-top: -7%;
+     margin-left: -35%;
+    }
+    .numerito {
+       font-size: 4.8vw;
+       margin-left: -10%;
+       margin-top: -4.7%;
+        
+    }
+  }

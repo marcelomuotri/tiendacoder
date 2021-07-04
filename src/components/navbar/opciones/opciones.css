@@ -24,3 +24,26 @@
 .navbar_opciones{
     margin-top: 80px!important;
 }
+
+.cssCerrar{
+    display: none!important;
+}
+
+
+@media (max-width: 600px) {
+    .navbar_opciones{
+        margin-top: 0px!important;
+    }
+    .text{
+        font-size: 100%;
+    }
+    .navbar-toggler{
+        position: absolute;
+        top: 25px;
+        right: 0px;
+    }
+    .navbar_opciones{
+        margin-top: 50%!important;
+    }
+  
+  }
