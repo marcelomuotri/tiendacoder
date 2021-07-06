@@ -97,17 +97,24 @@
 @media (max-width: 600px) {
     .contenedor__form__Dos{
         display: none;
+        
     }
 
     .contenedor__form__Uno{
         width: 75%;
         border: none;
+        margin-left: 10%;
         
     }
     .contenedor__form{
         margin-left: 0%;
         padding-right: 0%;
     }
+
+    .accedeATuCuenta{
+        margin-left: 18%;
+    }
+
     }
   
   

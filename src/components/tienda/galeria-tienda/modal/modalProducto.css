@@ -95,6 +95,7 @@ font-family: 'Montserrat';
 @media (max-width: 600px) {
     .modal-content {
      width: 57%!important;
+     margin-left: 25px;
     }
     .botonCancelarModal{
         width: 40%;

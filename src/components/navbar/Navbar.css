@@ -9,6 +9,7 @@
 @media (max-width: 600px) {
     .navbar-brand {
      position: absolute;
+     margin-top: -22%;
     }
     .margen{
         margin-top: 35%;

@@ -46,3 +46,13 @@
   font-family: 'Montserrat';
   font-size: 110%;
 }
+
+@media (max-width: 600px) {
+  .izquierda {
+    float: none;
+
+  }
+  .cuadradosVerdes{
+    height: 400px;
+  }
+}

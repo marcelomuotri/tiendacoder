@@ -11,36 +11,36 @@ a{
 
 
 .icono{
-    width: 5%!important;
+    width: 45%;
 }
 
 
 .carroverde2{
     margin-left: 64%;
     position: absolute;
-    width: 75%!important;
     margin-top: -4%;
     cursor: pointer;
 }
 
 .numerito{
     position: absolute;
-    margin-top: 0.6%;
-    margin-left: -3%;
+    margin-top: 5%;
+    margin-left: -25%;
     font-weight: 500;
     font-size: 1.25vw;
 }
 
 @media (max-width: 600px) {
     .icono {
-     width: 18%!important;
-     margin-top: -7%;
-     margin-left: -35%;
+     width: 40%;
+     margin-top: -8.5%;
+     margin-left: -80%;
     }
+ 
     .numerito {
-       font-size: 4.8vw;
-       margin-left: -10%;
-       margin-top: -4.7%;
+       font-size: 4vw;
+       margin-left: -20%;
+       margin-top: -4%;
         
     }
   }
