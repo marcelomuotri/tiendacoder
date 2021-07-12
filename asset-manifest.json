@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tiendacoder/static/css/main.2d171d89.chunk.css",
-    "main.js": "/tiendacoder/static/js/main.6bb419ac.chunk.js",
-    "main.js.map": "/tiendacoder/static/js/main.6bb419ac.chunk.js.map",
+    "main.js": "/tiendacoder/static/js/main.d6eca53e.chunk.js",
+    "main.js.map": "/tiendacoder/static/js/main.d6eca53e.chunk.js.map",
     "runtime-main.js": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js",
     "runtime-main.js.map": "/tiendacoder/static/js/runtime-main.2f9a1cd1.js.map",
-    "static/js/2.0a81e3aa.chunk.js": "/tiendacoder/static/js/2.0a81e3aa.chunk.js",
-    "static/js/2.0a81e3aa.chunk.js.map": "/tiendacoder/static/js/2.0a81e3aa.chunk.js.map",
+    "static/js/2.b9a1e4f1.chunk.js": "/tiendacoder/static/js/2.b9a1e4f1.chunk.js",
+    "static/js/2.b9a1e4f1.chunk.js.map": "/tiendacoder/static/js/2.b9a1e4f1.chunk.js.map",
     "index.html": "/tiendacoder/index.html",
     "static/css/main.2d171d89.chunk.css.map": "/tiendacoder/static/css/main.2d171d89.chunk.css.map",
-    "static/js/2.0a81e3aa.chunk.js.LICENSE.txt": "/tiendacoder/static/js/2.0a81e3aa.chunk.js.LICENSE.txt",
+    "static/js/2.b9a1e4f1.chunk.js.LICENSE.txt": "/tiendacoder/static/js/2.b9a1e4f1.chunk.js.LICENSE.txt",
     "static/media/amor.f7bf909b.svg": "/tiendacoder/static/media/amor.f7bf909b.svg",
     "static/media/App.css": "/tiendacoder/static/media/background.72b8c29c.jpg",
     "static/media/carro-de-la-compra.ecc773d6.png": "/tiendacoder/static/media/carro-de-la-compra.ecc773d6.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2f9a1cd1.js",
-    "static/js/2.0a81e3aa.chunk.js",
+    "static/js/2.b9a1e4f1.chunk.js",
     "static/css/main.2d171d89.chunk.css",
-    "static/js/main.6bb419ac.chunk.js"
+    "static/js/main.d6eca53e.chunk.js"
   ]
 }
