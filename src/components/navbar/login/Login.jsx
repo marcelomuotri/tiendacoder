@@ -14,6 +14,7 @@ const Login = (props) => {
 
 
     const [login, setLogin] = value.login
+    const [numProducto, setNumProducto] = value.numProducto
 
     //voy a registrar mis variables para el login
 
@@ -22,8 +23,10 @@ const Login = (props) => {
         auth.signOut()
             .then(() => {
                 props.history.push('/loginform') // empujo al loginform
-
+                setNumProducto([]) // hago que se resetee el carrito cuando cierro sesion
             })
+            
+        
     }
 
     const handleALogin = () => {
