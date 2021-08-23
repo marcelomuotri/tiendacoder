@@ -18,6 +18,7 @@ const ModalCheckout = (props) => {
     const [total, setTotal] = value.total
     const [cantidadTotal, setCantidadTotal] = value.cantidadTotal
     const handleOcultarCheckout = value.handleOcultarCheckout
+    const [nombre, setNombre]= value.nombre
     //context
 
     
@@ -26,7 +27,8 @@ const ModalCheckout = (props) => {
 
         if (props.firebaseUser !== null) {
             await db.collection(props.firebaseUser.uid).doc(props.firebaseUser.email).set({
-                titulo: numProducto
+                titulo: numProducto,
+                nombre: nombre
 
             })
         }

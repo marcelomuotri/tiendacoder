@@ -15,6 +15,8 @@ const Login = (props) => {
 
     const [login, setLogin] = value.login
     const [numProducto, setNumProducto] = value.numProducto
+    const [nombre, setNombre] = value.nombre
+    const [modoBlanqueo, setModoBlanqueo] = value.modoBlanqueo
 
     //voy a registrar mis variables para el login
 
@@ -31,10 +33,12 @@ const Login = (props) => {
 
     const handleALogin = () => {
         setLogin(true)
+        setModoBlanqueo(true)
     }
 
     const handleAResgistrarse = () => {
         setLogin(false)
+        setModoBlanqueo(true)
     }
 
     return (
@@ -46,7 +50,7 @@ const Login = (props) => {
                     {
                         props.firebaseUser !== null ? ( //si hay un usuario logueado
                             <div class=" d-flex">
-                                <label className="emailLogueado"> {props.firebaseUser.email}</label>
+                                <label className="emailLogueado"> Hola {nombre}</label>
                                 <button onClick={() => cerrarSesion()} className="botonLogIn">
                                     CERRAR SESION
                                 </button>

@@ -20,6 +20,8 @@ export const DataProvider = (props) => {
     const[userData, setUserData] = useState(data) 
     const[login, setLogin] = useState(true) // para cambiar el login
     const [cantidadTotal, setCantidadTotal] = useState(0)
+    const [nombre, setNombre] = useState('')
+    const [modoBlanqueo, setModoBlanqueo] = useState(true)
     //modal nuevo
     const [showCheckout, setShowCheckOut] = useState(false);
     
@@ -131,6 +133,9 @@ export const DataProvider = (props) => {
         userData: [userData, setUserData],
         login: [login, setLogin],
         cantidadTotal: [cantidadTotal, setCantidadTotal],
+        nombre: [nombre, setNombre],
+        modoBlanqueo: [modoBlanqueo, setModoBlanqueo],
+        
         compro: compro,
         handleOpen:  handleOpen,
         data : data,

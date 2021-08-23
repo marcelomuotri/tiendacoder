@@ -18,9 +18,14 @@ const LoginForm = (props) => {
 
     const [login, setLogin]= value.login
     const [numProducto, setNumProducto]= value.numProducto
+    const [nombre, setNombre]= value.nombre
+    const [modoBlanqueo, setModoBlanqueo] = value.modoBlanqueo
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState(null)
+    const [blanqueo, setBlanqueo] = useState('')
+    
+    
    
 
     //fondo
@@ -28,6 +33,11 @@ const LoginForm = (props) => {
 
     const handleLogin = () => {
         setLogin(!login)
+    }
+
+    const handleBlanqueo = () => {
+        setModoBlanqueo(false)
+        
     }
 
     const procesarDatos = e =>{
@@ -48,6 +58,8 @@ const LoginForm = (props) => {
             }
             }, [])
 
+            
+
     const ingreso = React.useCallback(async() => {
         try {
             const res = await auth.signInWithEmailAndPassword(email, password)
@@ -58,7 +70,6 @@ const LoginForm = (props) => {
             setPassword('')
             setError(null)
 
-            
             
             const data= await db.collection(res.user.uid).get() // aca traigo la informacion de mi usuario
             const arrayData= await (data.docs.map(doc => ({titulo: doc.titulo, ...doc.data() }))) //recupero los datos y los guardo
@@ -85,24 +96,19 @@ const LoginForm = (props) => {
        
         try {
             const res = await auth.createUserWithEmailAndPassword(email, password) // creo el usuario
-            
-            
-            await db.collection('usuarios').doc(res.user.email).set({ // crea la coleccion
-                email: res.user.email,
-                uid: res.user.uid
-            })
 
             await db.collection(res.user.uid).doc(res.user.email).set({ // agrega los productos a la coleccion, podria hacerlo de una pero prefiero que no 
                 titulo: numProducto
-
             })
+
+
             setEmail('')
             setPassword('')
             setError(null)
             props.history.push('/tienda')
             
         } catch (error) {
-            console.log(error)
+            
             if(error.code === "auth/invalid-email"){
             setError("el mail es invalido")
             }
@@ -116,6 +122,27 @@ const LoginForm = (props) => {
         }
     },[email,password, props.history])
 
+    const recuperar = async() => {
+    
+        try {
+
+            await auth.sendPasswordResetEmail(blanqueo)
+            setError(null)
+            alert("le hemos enviado un email para blanquear su contraseña")
+            
+
+        } catch (error) {
+            
+            if(error.code === "auth/invalid-email" ){
+                setError("Email no encontrado")
+            }
+
+            
+        }
+            
+       
+    }
+
     
 
     return (
@@ -126,47 +153,77 @@ const LoginForm = (props) => {
             
             <div className="col-lg-6 col-sm-11 contenedor__form__Uno">
                 {/* FORMULARIO */}
+                {modoBlanqueo ?
+                    <Form onSubmit={procesarDatos}>
+                    
+                        <Form.Group className="mt-4" controlId="formBasicEmail">
+                            
+                            <Form.Control onChange={e => setEmail(e.target.value)} type="email" placeholder=" EMAIL" />
+                            
+                        </Form.Group>
 
-                <Form onSubmit={procesarDatos}>
-                    <Form.Group className="mt-4" controlId="formBasicEmail">
+                        <Form.Group className="mt-4 " controlId="formBasicPassword">
+                            <Form.Control onChange={e => setPassword(e.target.value)} type="password" placeholder="PASSWORD" />
+                        </Form.Group>
                         
-                        <Form.Control onChange={e => setEmail(e.target.value)} type="email" placeholder=" EMAIL" />
-                        
-                    </Form.Group>
+                    
 
-                    <Form.Group className="mt-4 " controlId="formBasicPassword">
-                        <Form.Control onChange={e => setPassword(e.target.value)} type="password" placeholder="PASSWORD" />
-                    </Form.Group>
-                    
-                  
-
-                    <div className="divbotonLogin">
-                    { login ?
-                        <Button onClick={ ()=> ingreso()} className="mt-4 botonLogin" variant="primary" type="submit">
-                            LOG IN
-                        </Button>
-                                :
-                        <Button onClick={ ()=> registrar()} className="mt-4 botonLogin" variant="primary" type="submit">
-                            REGISTRARSE
-                        </Button>
-                    }
-                    
-                    {login ? 
-                    <label className="mt-4 textoTodavia">Todavia no tienes cuenta? <span onClick={ ()=> handleLogin()}> Haz click aqui! </span> </label>
-                    : 
-                    <label className="mt-4 textoTodavia">Ya tenes una cuenta? <span onClick={ ()=> handleLogin()}> Haz click aqui! </span> 
-                    </label>
-                    
-                    }
-                        {error && (
-                                <div className="alert alert-danger">
-                                {error}
-                                </div>
-                            )
+                        <div className="divbotonLogin">
+                        { login ?
+                            <div>
+                            <label className="mt-4 ">Olvidaste tu contraseña? <span onClick={ ()=> handleBlanqueo()}> Haz click aqui! </span> </label>
+                            <Button onClick={ ()=> ingreso()} className="mt-4 botonLogin" variant="primary" type="submit">
+                                LOG IN
+                            </Button>
+                            </div>
+                                    :
+                            <div>        
+                            <Form.Group className="mt-4 " controlId="formBasicName">
+                                <Form.Control onChange={e => setNombre(e.target.value)} type="text" placeholder="INGRESA TU NOMBRE" />
+                            </Form.Group>
+                            <Button onClick={ ()=> registrar()} className="mt-4 botonLogin" variant="primary" type="submit">
+                                REGISTRARSE
+                            </Button>
+                            </div>
                         }
-                    </div>
                     
-                </Form>
+                        {login ? 
+                        <label className="mt-4 textoTodavia">Todavia no tienes cuenta? <span onClick={ ()=> handleLogin()}> Haz click aqui! </span> </label>
+                        : 
+                        <label className="mt-4 textoTodavia">Ya tenes una cuenta? <span onClick={ ()=> handleLogin()}> Haz click aqui! </span> 
+                        </label>
+                        
+                        }
+                            {error && (
+                                    <div className="alert alert-danger">
+                                    {error}
+                                    </div>
+                                )
+                            }
+
+                                {/* recuperar usuario */}
+                           
+
+
+                        </div>
+                        
+                    </Form>
+                    :
+                    <div>
+                        <Form.Group className="mt-4 " controlId="blanquearContraseña">
+                            <Form.Control onChange={e => setBlanqueo(e.target.value)} type="text" placeholder="mail a blanquear" />
+                        </Form.Group>
+                        <Button onClick={ ()=> recuperar()} className="mt-4 botonLogin" variant="primary" type="submit">
+                            Recuperar
+                        </Button>
+                        {error && (
+                                    <div className="alert alert-danger mt-4">
+                                    {error}
+                                    </div>
+                                )
+                            }
+                    </div>      
+                }
             </div>
              
 
