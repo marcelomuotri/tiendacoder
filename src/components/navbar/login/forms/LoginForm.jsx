@@ -26,8 +26,6 @@ const LoginForm = (props) => {
     const [blanqueo, setBlanqueo] = useState('')
     
     
-   
-
     //fondo
     document.body.style = 'background: #F3F4EE' /* cambio el color de fondo */
 
